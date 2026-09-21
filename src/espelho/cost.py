@@ -1,16 +1,23 @@
 """Preços por 1 milhão de tokens (US$) e cálculo do custo de uma chamada.
 
-Fonte: tabela da documentação da Claude API (cache de jun/2026). Os preços podem
-ter mudado, então confira antes de confiar nos números.
+Fonte: página oficial de preços da OpenAI, lida em 21/09/2026. Os preços mudam,
+então confira antes de confiar nos números.
+
+Atenção: nos modelos de raciocínio (família GPT-5 em diante) os tokens de
+raciocínio são cobrados como saída. `output_tokens` da API já os inclui.
 """
 
 PRICES_PER_MTOK = {
-    "claude-haiku-4-5": {"input": 1.00, "output": 5.00},
-    "claude-sonnet-5": {"input": 2.00, "output": 10.00},
-    "claude-opus-5": {"input": 5.00, "output": 25.00},
+    "gpt-5.6-luna": {"input": 0.20, "output": 1.20},
+    "gpt-5.6-terra": {"input": 2.00, "output": 12.00},
+    "gpt-5.6-sol": {"input": 4.00, "output": 20.00},
+    "gpt-5.4-mini": {"input": 0.75, "output": 4.50},
+    "gpt-5.4-nano": {"input": 0.20, "output": 1.25},
+    "gpt-5-mini": {"input": 0.25, "output": 2.00},
+    "gpt-5-nano": {"input": 0.05, "output": 0.40},
 }
 
-# O Batch API cobra metade do preço padrão.
+# O Batch API cobra metade do preço padrão, na entrada e na saída.
 BATCH_DISCOUNT = 0.5
 
 

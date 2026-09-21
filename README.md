@@ -9,9 +9,10 @@ Status: em construção (semana 1). O plano e o diário de estudo ficam em um do
 
 ```bash
 uv sync
-copy .env.example .env   # depois cole sua chave em .env
+copy .env.example .env   # depois cole sua chave da OpenAI em .env
 uv run python scripts/smoke_test.py
 uv run pytest
 ```
 
+O código lê `OPENAI_API_KEY` (ou `CHATGPT_API_KEY`) do arquivo `.env`.
 Nunca versione o arquivo `.env`.

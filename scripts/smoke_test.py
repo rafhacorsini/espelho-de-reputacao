@@ -1,50 +1,51 @@
-"""Teste de fumaça: uma chamada ao Haiku 4.5 que imprime tokens, custo e latência."""
+"""Teste de fumaça: uma chamada à OpenAI que imprime tokens, custo e latência."""
 
 import os
 import time
 
-import anthropic
+import openai
 from dotenv import load_dotenv
+from openai import OpenAI
 
 from espelho.cost import call_cost
 
-MODEL = "claude-haiku-4-5"
+MODEL = "gpt-5.6-luna"
 
 
 def main() -> None:
     load_dotenv()
-    if not os.getenv("ANTHROPIC_API_KEY"):
-        raise SystemExit(
-            "ANTHROPIC_API_KEY está vazia. Cole a chave no arquivo .env e rode de novo."
-        )
+    key = os.getenv("OPENAI_API_KEY") or os.getenv("CHATGPT_API_KEY")
+    if not key:
+        raise SystemExit("Nenhuma chave encontrada. Cole a chave no arquivo .env.")
 
-    client = anthropic.Anthropic()  # lê ANTHROPIC_API_KEY do ambiente
+    client = OpenAI(api_key=key)
 
     start = time.perf_counter()
     try:
-        response = client.messages.create(
+        response = client.responses.create(
             model=MODEL,
-            max_tokens=100,
-            messages=[
-                {
-                    "role": "user",
-                    "content": "Explique em uma frase curta o que é um token em IA.",
-                }
-            ],
+            input="Explique em uma frase curta o que é um token em IA.",
+            max_output_tokens=400,
+            reasoning={"effort": "low"},
         )
-    except anthropic.AuthenticationError:
-        raise SystemExit("Chave inválida. Confira o ANTHROPIC_API_KEY no arquivo .env.")
+    except openai.AuthenticationError:
+        raise SystemExit("Chave inválida. Confira o arquivo .env.")
+    except openai.APIStatusError as error:
+        raise SystemExit(f"A API recusou o pedido ({error.status_code}): {error.message}")
     latency = time.perf_counter() - start
 
-    for block in response.content:
-        if block.type == "text":
-            print(block.text)
+    print(response.output_text)
 
     usage = response.usage
+    details = getattr(usage, "output_tokens_details", None)
+    reasoning_tokens = getattr(details, "reasoning_tokens", 0) or 0
     cost = call_cost(MODEL, usage.input_tokens, usage.output_tokens)
+
     print(f"\nmodelo: {MODEL}")
+    print(f"tokens de entrada: {usage.input_tokens}")
     print(
-        f"tokens de entrada: {usage.input_tokens} | tokens de saída: {usage.output_tokens}"
+        f"tokens de saída: {usage.output_tokens} "
+        f"(dos quais {reasoning_tokens} de raciocínio)"
     )
     print(f"custo estimado: US$ {cost:.6f}")
     print(f"latência: {latency:.2f}s")

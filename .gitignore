@@ -19,3 +19,6 @@ logs/
 data/synthetic/prompt_batches/
 data/synthetic/texts/
 data/synthetic/missing_ids.txt
+
+# Material de estudo pessoal, não é parte do case study
+estudo/

@@ -13,3 +13,9 @@ wheels/
 .env
 data/raw/
 logs/
+
+# Rascunhos regeneráveis: prompts exportados e textos colados do chat.
+# O resultado final (limpo) fica em data/synthetic/*.parquet, versionado.
+data/synthetic/prompt_batches/
+data/synthetic/texts/
+data/synthetic/missing_ids.txt

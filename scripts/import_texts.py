@@ -19,13 +19,17 @@ MISSING = Path("data/synthetic/missing_ids.txt")
 def main() -> None:
     pilot = pd.read_parquet(PILOT)
 
-    files = sorted(p for p in TEXTS_DIR.glob("*") if p.suffix in {".jsonl", ".txt", ".json"})
+    files = sorted(p for p in TEXTS_DIR.glob("*") if p.name.endswith((".jsonl", ".jsonl.txt", ".json")))
     if not files:
         raise SystemExit(f"Nenhum arquivo em {TEXTS_DIR}. Cole as respostas do chat lá.")
 
     records = []
     for path in files:
-        parsed, errors = parse_lines(path.read_text(encoding="utf-8-sig"))
+        content = path.read_text(encoding="utf-8-sig")
+        if content.lstrip().startswith("Você vai escrever avaliações"):
+            print(f"{path.name}: parece o PROMPT, não a resposta da IA. Pulei este arquivo.")
+            continue
+        parsed, errors = parse_lines(content)
         records.extend(parsed)
         print(f"{path.name}: {len(parsed)} linhas lidas, {len(errors)} com erro")
         for number, reason in errors[:5]:

@@ -77,7 +77,8 @@ def main() -> None:
         default = reverse_option.get(existing_by_aspect.get(aspect), "não mencionado")
         choices[aspect] = st.radio(
             f"**{aspect.replace('_', ' ')}** — {meaning}",
-            OPTIONS, index=OPTIONS.index(default), horizontal=True, key=f"aspect_{row['review_id']}",
+            OPTIONS, index=OPTIONS.index(default), horizontal=True,
+            key=f"aspect_{row['review_id']}_{aspect}",
         )
 
     col1, col2, col3 = st.columns(3)

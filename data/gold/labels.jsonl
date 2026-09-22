@@ -1,0 +1,152 @@
+{"review_id": "R00017", "mentions": [{"aspect": "ambiente_limpeza", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00052", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00073", "mentions": [], "discarded": false}
+{"review_id": "R00087", "mentions": [], "discarded": false}
+{"review_id": "R00140", "mentions": [], "discarded": false}
+{"review_id": "R00148", "mentions": [{"aspect": "condicao_entrega", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00176", "mentions": [], "discarded": false}
+{"review_id": "R00194", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00206", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00224", "mentions": [], "discarded": false}
+{"review_id": "R00233", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00297", "mentions": [{"aspect": "qualidade_comida", "polarity": "negativo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R00314", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00329", "mentions": [{"aspect": "qualidade_comida", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R00351", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00358", "mentions": [{"aspect": "condicao_entrega", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00361", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00369", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00387", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "tempo_espera_salao", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R00388", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00486", "mentions": [{"aspect": "preco_valor", "polarity": "negativo"}, {"aspect": "resposta_canal", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R00510", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00517", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00541", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00575", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00577", "mentions": [], "discarded": false}
+{"review_id": "R00578", "mentions": [{"aspect": "prazo_entrega", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R00587", "mentions": [{"aspect": "condicao_entrega", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00626", "mentions": [{"aspect": "ambiente_limpeza", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R00648", "mentions": [{"aspect": "condicao_entrega", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R00667", "mentions": [], "discarded": false}
+{"review_id": "R00728", "mentions": [{"aspect": "condicao_entrega", "polarity": "negativo"}, {"aspect": "qualidade_comida", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R00782", "mentions": [{"aspect": "ambiente_limpeza", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00877", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00896", "mentions": [{"aspect": "condicao_entrega", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00901", "mentions": [], "discarded": false}
+{"review_id": "R00911", "mentions": [], "discarded": false}
+{"review_id": "R00920", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R00921", "mentions": [], "discarded": false}
+{"review_id": "R00944", "mentions": [{"aspect": "tempo_espera_salao", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R00965", "mentions": [{"aspect": "tempo_espera_salao", "polarity": "negativo"}, {"aspect": "condicao_entrega", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00966", "mentions": [], "discarded": false}
+{"review_id": "R00969", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "ambiente_limpeza", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R00973", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01000", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01007", "mentions": [{"aspect": "condicao_entrega", "polarity": "negativo"}, {"aspect": "qualidade_comida", "polarity": "negativo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01016", "mentions": [{"aspect": "prazo_entrega", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01027", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01031", "mentions": [{"aspect": "preco_valor", "polarity": "negativo"}, {"aspect": "ambiente_limpeza", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01048", "mentions": [{"aspect": "prazo_entrega", "polarity": "negativo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01064", "mentions": [], "discarded": false}
+{"review_id": "R01070", "mentions": [{"aspect": "resposta_canal", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01131", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01132", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01134", "mentions": [{"aspect": "prazo_entrega", "polarity": "negativo"}, {"aspect": "qualidade_comida", "polarity": "negativo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01138", "mentions": [], "discarded": false}
+{"review_id": "R01148", "mentions": [], "discarded": false}
+{"review_id": "R01175", "mentions": [{"aspect": "resposta_canal", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01189", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01210", "mentions": [], "discarded": false}
+{"review_id": "R01260", "mentions": [], "discarded": false}
+{"review_id": "R01264", "mentions": [], "discarded": false}
+{"review_id": "R01284", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01292", "mentions": [], "discarded": false}
+{"review_id": "R01317", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01346", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01391", "mentions": [], "discarded": false}
+{"review_id": "R01412", "mentions": [], "discarded": false}
+{"review_id": "R01424", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01436", "mentions": [], "discarded": false}
+{"review_id": "R01464", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "tempo_espera_salao", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01500", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "prazo_entrega", "polarity": "negativo"}, {"aspect": "resposta_canal", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01522", "mentions": [{"aspect": "prazo_entrega", "polarity": "negativo"}, {"aspect": "preco_valor", "polarity": "negativo"}, {"aspect": "resposta_canal", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01526", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01540", "mentions": [{"aspect": "qualidade_comida", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01548", "mentions": [{"aspect": "prazo_entrega", "polarity": "negativo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01567", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01592", "mentions": [], "discarded": false}
+{"review_id": "R01622", "mentions": [], "discarded": false}
+{"review_id": "R01623", "mentions": [{"aspect": "qualidade_comida", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01687", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01710", "mentions": [], "discarded": false}
+{"review_id": "R01741", "mentions": [], "discarded": true}
+{"review_id": "R01743", "mentions": [], "discarded": true}
+{"review_id": "R01755", "mentions": [], "discarded": false}
+{"review_id": "R01785", "mentions": [], "discarded": false}
+{"review_id": "R01837", "mentions": [], "discarded": false}
+{"review_id": "R01861", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01881", "mentions": [{"aspect": "condicao_entrega", "polarity": "negativo"}, {"aspect": "qualidade_comida", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01911", "mentions": [{"aspect": "prazo_entrega", "polarity": "positivo"}, {"aspect": "condicao_entrega", "polarity": "negativo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R01914", "mentions": [{"aspect": "condicao_entrega", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01939", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01941", "mentions": [], "discarded": false}
+{"review_id": "R01954", "mentions": [{"aspect": "tempo_espera_salao", "polarity": "negativo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01957", "mentions": [], "discarded": false}
+{"review_id": "R01961", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01981", "mentions": [{"aspect": "condicao_entrega", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R01992", "mentions": [], "discarded": false}
+{"review_id": "R01994", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02022", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02059", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "ambiente_limpeza", "polarity": "positivo"}, {"aspect": "resposta_canal", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02125", "mentions": [{"aspect": "prazo_entrega", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02140", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02198", "mentions": [{"aspect": "condicao_entrega", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02204", "mentions": [{"aspect": "qualidade_comida", "polarity": "negativo"}, {"aspect": "resposta_canal", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02206", "mentions": [{"aspect": "prazo_entrega", "polarity": "negativo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02236", "mentions": [{"aspect": "tempo_espera_salao", "polarity": "negativo"}, {"aspect": "qualidade_comida", "polarity": "negativo"}, {"aspect": "resposta_canal", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02273", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "negativo"}, {"aspect": "ambiente_limpeza", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02312", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "ambiente_limpeza", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02350", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02378", "mentions": [{"aspect": "qualidade_comida", "polarity": "negativo"}, {"aspect": "ambiente_limpeza", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02404", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "tempo_espera_salao", "polarity": "negativo"}, {"aspect": "ambiente_limpeza", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02422", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02428", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02438", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02443", "mentions": [{"aspect": "tempo_espera_salao", "polarity": "negativo"}, {"aspect": "prazo_entrega", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02452", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02456", "mentions": [{"aspect": "qualidade_comida", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02506", "mentions": [{"aspect": "atendimento", "polarity": "negativo"}, {"aspect": "ambiente_limpeza", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02510", "mentions": [{"aspect": "resposta_canal", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02520", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02570", "mentions": [{"aspect": "atendimento", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02589", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02598", "mentions": [], "discarded": false}
+{"review_id": "R02639", "mentions": [], "discarded": false}
+{"review_id": "R02668", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02669", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02670", "mentions": [], "discarded": false}
+{"review_id": "R02693", "mentions": [{"aspect": "atendimento", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02714", "mentions": [{"aspect": "tempo_espera_salao", "polarity": "positivo"}, {"aspect": "ambiente_limpeza", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02724", "mentions": [{"aspect": "qualidade_comida", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02772", "mentions": [], "discarded": false}
+{"review_id": "R02787", "mentions": [{"aspect": "qualidade_comida", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02788", "mentions": [{"aspect": "qualidade_comida", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02793", "mentions": [], "discarded": false}
+{"review_id": "R02806", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02808", "mentions": [{"aspect": "atendimento", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02836", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02848", "mentions": [{"aspect": "prazo_entrega", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02856", "mentions": [], "discarded": false}
+{"review_id": "R02866", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02873", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "resposta_canal", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02893", "mentions": [{"aspect": "prazo_entrega", "polarity": "negativo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02896", "mentions": [], "discarded": false}
+{"review_id": "R02933", "mentions": [{"aspect": "prazo_entrega", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02941", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02953", "mentions": [{"aspect": "prazo_entrega", "polarity": "positivo"}, {"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02955", "mentions": [{"aspect": "preco_valor", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02964", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}, {"aspect": "preco_valor", "polarity": "negativo"}, {"aspect": "ambiente_limpeza", "polarity": "negativo"}], "discarded": false}
+{"review_id": "R02969", "mentions": [{"aspect": "qualidade_comida", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02988", "mentions": [{"aspect": "preco_valor", "polarity": "positivo"}], "discarded": false}
+{"review_id": "R02999", "mentions": [{"aspect": "atendimento", "polarity": "negativo"}], "discarded": false}

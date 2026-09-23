@@ -41,9 +41,11 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--split", choices=["dev", "test"], default="dev")
     parser.add_argument("--version", default="extract_v1")
+    parser.add_argument("--gold", default=None, help="arquivo do gabarito, ex.: dev_v2 (padrão: o próprio split)")
     args = parser.parse_args()
 
-    gold_df = pd.read_parquet(f"data/gold/{args.split}.parquet")
+    gold_name = args.gold or args.split
+    gold_df = pd.read_parquet(f"data/gold/{gold_name}.parquet")
     pred_df = pd.read_parquet(f"data/predictions/{args.split}_{args.version}.parquet")
     tones = pd.read_parquet(PILOT).set_index("review_id")["tone"]
 
@@ -52,8 +54,8 @@ def main() -> None:
     baseline = {r.review_id: extract_baseline(r.text) for r in gold_df.itertuples()}
 
     results = {"llm": evaluate(gold, llm), "baseline": evaluate(gold, baseline)}
-    print_table(f"LLM ({args.version}) no {args.split}", results["llm"])
-    print_table(f"Baseline de palavras-chave no {args.split}", results["baseline"])
+    print_table(f"LLM ({args.version}) contra o gabarito {gold_name}", results["llm"])
+    print_table(f"Baseline de palavras-chave contra o gabarito {gold_name}", results["baseline"])
 
     print("\n=== Polaridade (entre aspectos que os dois acharam): ouro -> previsto ===")
     for (g, p), n in sorted(polarity_confusion(gold, llm).items()):
@@ -67,7 +69,7 @@ def main() -> None:
             print(f"  {name:<9} micro F1: {fmt(sub['micro']['f1'])}")
 
     REPORTS.mkdir(exist_ok=True)
-    out = REPORTS / f"eval_{args.split}_{args.version}.json"
+    out = REPORTS / f"eval_{gold_name}_{args.version}.json"
     out.write_text(json.dumps(results, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
     print(f"\nSalvo em {out}")
 

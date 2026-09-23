@@ -5,6 +5,10 @@ Rodar com:
 
 Cada review mostra o texto, e para cada um dos 8 aspectos você marca:
 não mencionado, elogio ou reclamação. Salva a cada clique em "Salvar e avançar".
+
+Rodada cega (Dia 3): rotula de novo as 50 reviews do test, sem ver os rótulos
+antigos e já com as regras do gabarito v2:
+    uv run streamlit run app/label_reviews.py -- --rodada-cega
 """
 
 import sys
@@ -18,16 +22,31 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from espelho.gold import TARGET_LABELED, load_labels, progress, save_label  # noqa: E402
 from espelho.schema import ASPECTS  # noqa: E402
 
-PILOT_REVIEWS = Path("data/synthetic/pilot_reviews.parquet")
-LABELS_PATH = Path("data/gold/labels.jsonl")
+BLIND = "--rodada-cega" in sys.argv
+
+if BLIND:
+    PILOT_REVIEWS = Path("data/gold/test.parquet")
+    LABELS_PATH = Path("data/gold/relabel_test.jsonl")
+    TARGET = 50
+else:
+    PILOT_REVIEWS = Path("data/synthetic/pilot_reviews.parquet")
+    LABELS_PATH = Path("data/gold/labels.jsonl")
+    TARGET = TARGET_LABELED
+
+RULES_V2 = """**Regras do gabarito v2** (além das de sempre):
+- Rapidez ou demora sem dizer onde: **delivery → prazo de entrega**, **salão → tempo de espera no salão**.
+- Em delivery, "chegou tudo certinho" / "veio tudo direitinho" → **condição da entrega, elogio**.
+- Demora ou rapidez da equipe para atender → **atendimento**.
+- Atendimento é só a equipe do salão. Simpatia ou solução pelo WhatsApp, telefone ou app → **resposta do canal**.
+- Satisfação genérica, sem dizer o quê → nenhum aspecto."""
 
 OPTIONS = ["não mencionado", "elogio", "reclamação"]
 POLARITY_BY_OPTION = {"elogio": "positivo", "reclamação": "negativo"}
 
 
 @st.cache_data
-def load_pilot() -> pd.DataFrame:
-    return pd.read_parquet(PILOT_REVIEWS)
+def load_pilot(path: str) -> pd.DataFrame:
+    return pd.read_parquet(path)
 
 
 def main() -> None:
@@ -37,11 +56,13 @@ def main() -> None:
         st.error(f"Não encontrei {PILOT_REVIEWS}. Rode a importação dos textos primeiro.")
         return
 
-    df = load_pilot()
+    df = load_pilot(str(PILOT_REVIEWS))
     labels = load_labels(LABELS_PATH)
-    stats = progress(labels, target=TARGET_LABELED)
+    stats = progress(labels, target=TARGET)
 
-    st.title("Rotular reviews")
+    st.title("Rodada cega: test" if BLIND else "Rotular reviews")
+    if BLIND:
+        st.info(RULES_V2)
     st.progress(min(1.0, stats["labeled"] / stats["target"]))
     st.caption(
         f"{stats['labeled']} de {stats['target']} rotuladas "
@@ -62,7 +83,8 @@ def main() -> None:
     existing = labels.get(row["review_id"])
 
     st.divider()
-    st.markdown(f"**{row['review_id']}** · {row['channel']} · {row['cuisine']} · {row['stars']}★")
+    cuisine = f" · {row['cuisine']}" if "cuisine" in row else ""
+    st.markdown(f"**{row['review_id']}** · {row['channel']}{cuisine} · {row['stars']}★")
     st.markdown(f"> {row['text']}")
     if existing:
         st.info("Esta review já foi rotulada. Você pode ver e corrigir os valores abaixo.")

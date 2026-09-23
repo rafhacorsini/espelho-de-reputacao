@@ -18,7 +18,14 @@ from espelho.schema import ASPECTS
 # Um só lugar de verdade: os aspectos vêm de schema.py, nunca duplicados aqui.
 Aspect = StrEnum("Aspect", {name: name for name in ASPECTS})
 
-PROMPT_VERSION = "extract_v1"
+PROMPT_VERSIONS = ("extract_v1", "extract_v2")
+PROMPT_VERSION = "extract_v2"
+
+# Regras que o v2 acrescenta, vindas das decisões do gabarito v2 (Dia 3).
+V2_RULES = """7. A mensagem informa o canal: "salao" (comeu no restaurante) ou "delivery" (pediu para entregar). Rapidez ou demora sem dizer onde foi: se o canal for delivery, é prazo_entrega; se for salao, é tempo_espera_salao.
+8. Em delivery, "chegou tudo certinho", "veio tudo direitinho" e frases parecidas sobre o pedido chegar em ordem são condicao_entrega positivo.
+9. Demora ou rapidez da equipe para atender o cliente (por exemplo, "demoraram para me atender") é atendimento, não tempo_espera_salao.
+10. atendimento é só a equipe presencial do salão. Simpatia, rapidez ou solução pelo WhatsApp, telefone ou app é resposta_canal."""
 
 
 class Mention(BaseModel):
@@ -33,7 +40,23 @@ class Extraction(BaseModel):
     mentions: list[Mention]
 
 
-def build_system_prompt() -> str:
+def build_system_prompt(version: str = PROMPT_VERSION) -> str:
+    if version not in PROMPT_VERSIONS:
+        raise ValueError(f"Versão de prompt desconhecida: {version}")
+    prompt = _base_prompt()
+    if version == "extract_v2":
+        prompt += "\n" + V2_RULES
+    return prompt
+
+
+def build_user_message(text: str, channel: str | None, version: str = PROMPT_VERSION) -> str:
+    # O v1 não recebia o canal; mantemos assim para o v1 continuar reproduzível.
+    if version == "extract_v1" or channel is None:
+        return f"Review:\n{text}"
+    return f"Canal: {channel}\nReview:\n{text}"
+
+
+def _base_prompt() -> str:
     aspects = "\n".join(f"- {name}: {meaning}" for name, meaning in ASPECTS.items())
     return f"""Você analisa avaliações de clientes de restaurantes em português do Brasil e extrai, de forma estruturada, quais assuntos (aspectos) a review trata e com que polaridade.
 
@@ -55,14 +78,21 @@ def evidence_is_verbatim(evidencia: str, text: str) -> bool:
     return bool(snippet) and snippet in text
 
 
-def extract_one(client: OpenAI, model: str, text: str, effort: str = "low") -> dict:
+def extract_one(
+    client: OpenAI,
+    model: str,
+    text: str,
+    channel: str | None = None,
+    version: str = PROMPT_VERSION,
+    effort: str = "low",
+) -> dict:
     """Chama a API para uma review e devolve as menções já com o guard de evidência."""
     start = time.perf_counter()
     response = client.responses.parse(
         model=model,
         input=[
-            {"role": "system", "content": build_system_prompt()},
-            {"role": "user", "content": f"Review:\n{text}"},
+            {"role": "system", "content": build_system_prompt(version)},
+            {"role": "user", "content": build_user_message(text, channel, version)},
         ],
         text_format=Extraction,
         reasoning={"effort": effort},
@@ -84,7 +114,7 @@ def extract_one(client: OpenAI, model: str, text: str, effort: str = "low") -> d
     return {
         "mentions": mentions,
         "model": model,
-        "prompt_version": PROMPT_VERSION,
+        "prompt_version": version,
         "input_tokens": usage.input_tokens,
         "output_tokens": usage.output_tokens,
         "cost": call_cost(model, usage.input_tokens, usage.output_tokens),

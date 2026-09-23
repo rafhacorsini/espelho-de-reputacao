@@ -15,7 +15,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from openai import OpenAI
 
-from espelho.extract import PROMPT_VERSION, extract_one
+from espelho.extract import PROMPT_VERSION, PROMPT_VERSIONS, extract_one
 
 MODEL = "gpt-5.6-luna"
 LOG_PATH = Path("logs/extract_calls.jsonl")
@@ -24,6 +24,7 @@ LOG_PATH = Path("logs/extract_calls.jsonl")
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--split", choices=["dev", "test"], required=True)
+    parser.add_argument("--version", choices=PROMPT_VERSIONS, default=PROMPT_VERSION)
     args = parser.parse_args()
 
     if args.split == "test":
@@ -43,7 +44,7 @@ def main() -> None:
     started = time.perf_counter()
     with LOG_PATH.open("a", encoding="utf-8") as log_file:
         for i, (_, row) in enumerate(df.iterrows(), start=1):
-            result = extract_one(client, MODEL, row["text"])
+            result = extract_one(client, MODEL, row["text"], channel=row["channel"], version=args.version)
             total_cost += result["cost"]
 
             log_file.write(
@@ -63,7 +64,7 @@ def main() -> None:
             if i % 20 == 0 or i == len(df):
                 print(f"{i}/{len(df)} | custo acumulado: US$ {total_cost:.4f}")
 
-    out = Path(f"data/predictions/{args.split}_{PROMPT_VERSION}.parquet")
+    out = Path(f"data/predictions/{args.split}_{args.version}.parquet")
     out.parent.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(predictions).to_parquet(out, index=False)
 

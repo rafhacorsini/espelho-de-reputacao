@@ -1,0 +1,124 @@
+{
+  "llm": {
+    "per_aspect": {
+      "atendimento": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 12
+      },
+      "tempo_espera_salao": {
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
+        "support": 8
+      },
+      "prazo_entrega": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8888888888888888,
+        "f1": 0.7999999999999999,
+        "support": 9
+      },
+      "condicao_entrega": {
+        "precision": 0.6428571428571429,
+        "recall": 0.9,
+        "f1": 0.75,
+        "support": 10
+      },
+      "qualidade_comida": {
+        "precision": 0.9636363636363636,
+        "recall": 1.0,
+        "f1": 0.9814814814814815,
+        "support": 53
+      },
+      "preco_valor": {
+        "precision": 0.7857142857142857,
+        "recall": 1.0,
+        "f1": 0.88,
+        "support": 11
+      },
+      "ambiente_limpeza": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 6
+      },
+      "resposta_canal": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      }
+    },
+    "micro": {
+      "precision": 0.8661417322834646,
+      "recall": 0.9649122807017544,
+      "f1": 0.9128630705394191,
+      "support": 114
+    },
+    "macro_f1": 0.8773280423280423,
+    "empty_reviews": 25,
+    "empty_correct": 21
+  },
+  "baseline": {
+    "per_aspect": {
+      "atendimento": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 12
+      },
+      "tempo_espera_salao": {
+        "precision": 0.30434782608695654,
+        "recall": 0.875,
+        "f1": 0.4516129032258065,
+        "support": 8
+      },
+      "prazo_entrega": {
+        "precision": 0.36363636363636365,
+        "recall": 0.4444444444444444,
+        "f1": 0.39999999999999997,
+        "support": 9
+      },
+      "condicao_entrega": {
+        "precision": 0.125,
+        "recall": 0.1,
+        "f1": 0.11111111111111112,
+        "support": 10
+      },
+      "qualidade_comida": {
+        "precision": 0.8135593220338984,
+        "recall": 0.9056603773584906,
+        "f1": 0.8571428571428572,
+        "support": 53
+      },
+      "preco_valor": {
+        "precision": 0.47058823529411764,
+        "recall": 0.7272727272727273,
+        "f1": 0.5714285714285714,
+        "support": 11
+      },
+      "ambiente_limpeza": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 6
+      },
+      "resposta_canal": {
+        "precision": 0.6,
+        "recall": 0.6,
+        "f1": 0.6,
+        "support": 5
+      }
+    },
+    "micro": {
+      "precision": 0.6223776223776224,
+      "recall": 0.7807017543859649,
+      "f1": 0.6926070038910506,
+      "support": 114
+    },
+    "macro_f1": 0.6060547875064004,
+    "empty_reviews": 25,
+    "empty_correct": 21
+  }
+}

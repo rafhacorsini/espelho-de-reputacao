@@ -10,6 +10,8 @@ conta como acerto (verdadeiro positivo) se o aspecto E a polaridade batem.
 
 from collections import Counter
 
+from sklearn.metrics import cohen_kappa_score
+
 from espelho.schema import ASPECTS
 
 
@@ -64,6 +66,26 @@ def evaluate(gold_by_review: dict, pred_by_review: dict) -> dict:
         "empty_reviews": len(empty_gold),
         "empty_correct": empty_kept,
     }
+
+
+def agreement(labels_a: dict, labels_b: dict) -> dict:
+    """Concordância entre duas rotulagens das mesmas reviews.
+
+    Cada par (review, aspecto) vira uma de três classes: nenhum, positivo ou
+    negativo. O kappa de Cohen desconta a concordância que viria por acaso
+    (como quase todo par é "nenhum", concordar nele é fácil e vale pouco).
+    """
+    shared = sorted(labels_a.keys() & labels_b.keys())
+    a, b = [], []
+    for review_id in shared:
+        pol_a = {m["aspect"]: m["polarity"] for m in labels_a[review_id]}
+        pol_b = {m["aspect"]: m["polarity"] for m in labels_b[review_id]}
+        for aspect in ASPECTS:
+            a.append(pol_a.get(aspect, "nenhum"))
+            b.append(pol_b.get(aspect, "nenhum"))
+    raw = sum(x == y for x, y in zip(a, b)) / len(a) if a else None
+    kappa = cohen_kappa_score(a, b) if a else None
+    return {"reviews": len(shared), "raw_agreement": raw, "kappa": kappa}
 
 
 def polarity_confusion(gold_by_review: dict, pred_by_review: dict) -> dict:

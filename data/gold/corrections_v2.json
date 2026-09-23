@@ -1,0 +1,30 @@
+{
+  "version": "gold_v2",
+  "date": "2026-09-23",
+  "rules": {
+    "A": "O texto diz claramente e o gabarito v1 deixou passar (ou marcou o aspecto errado).",
+    "R2": "'Chegou tudo certinho' / 'veio tudo direitinho' em delivery = condicao_entrega positivo.",
+    "R3": "Rapidez ou demora sem dizer onde: canal delivery = prazo_entrega; canal salao = tempo_espera_salao.",
+    "R4": "Demora ou rapidez da equipe para atender = atendimento, nao tempo_espera_salao."
+  },
+  "warning": "As correcoes foram decididas depois de ver as previsoes do LLM no dev. Isso favorece o modelo (vies de adjudicacao). Por isso reportamos o F1 no dev v1 e no dev v2, e o numero oficial vem do test, que nenhum modelo viu.",
+  "corrections": [
+    {"review_id": "R01016", "rule": "A", "reason": "'achei caro demais pelo que veio'", "mentions": [["prazo_entrega", "positivo"], ["qualidade_comida", "positivo"], ["preco_valor", "negativo"]]},
+    {"review_id": "R01131", "rule": "A", "reason": "'espera curta'", "mentions": [["atendimento", "positivo"], ["qualidade_comida", "positivo"], ["tempo_espera_salao", "positivo"]]},
+    {"review_id": "R02999", "rule": "A", "reason": "'o preco foi bem justo'", "mentions": [["atendimento", "negativo"], ["preco_valor", "positivo"]]},
+    {"review_id": "R02896", "rule": "A", "reason": "'Pecas frescas e bem saborosas'", "mentions": [["qualidade_comida", "positivo"]]},
+    {"review_id": "R02589", "rule": "A", "reason": "'um salao tao limpo'", "mentions": [["qualidade_comida", "positivo"], ["ambiente_limpeza", "positivo"]]},
+    {"review_id": "R00387", "rule": "A", "reason": "'a carne estava muito boa'", "mentions": [["atendimento", "positivo"], ["tempo_espera_salao", "negativo"], ["qualidade_comida", "positivo"]]},
+    {"review_id": "R01954", "rule": "A", "reason": "'o ambiente era bem agradavel e limpo'", "mentions": [["qualidade_comida", "positivo"], ["tempo_espera_salao", "negativo"], ["ambiente_limpeza", "positivo"]]},
+    {"review_id": "R02866", "rule": "A", "reason": "'o preco valeu a pena'", "mentions": [["qualidade_comida", "positivo"], ["preco_valor", "positivo"]]},
+    {"review_id": "R01548", "rule": "A", "reason": "'chegou meio baguncada ... estado da entrega' e condicao; o texto nao fala de tempo", "mentions": [["condicao_entrega", "negativo"], ["qualidade_comida", "positivo"]]},
+    {"review_id": "R00148", "rule": "A", "reason": "'Chegou rapidinho' e prazo, nao condicao", "mentions": [["prazo_entrega", "positivo"]]},
+    {"review_id": "R02639", "rule": "R2", "reason": "'Chegou tudo certinho'", "mentions": [["condicao_entrega", "positivo"]]},
+    {"review_id": "R02836", "rule": "R2", "reason": "'Chegou tudo certinho'", "mentions": [["qualidade_comida", "positivo"], ["condicao_entrega", "positivo"]]},
+    {"review_id": "R02856", "rule": "R2", "reason": "'Veio tudo direitinho'", "mentions": [["condicao_entrega", "positivo"]]},
+    {"review_id": "R02022", "rule": "R3", "reason": "'Demorou' no salao", "mentions": [["preco_valor", "positivo"], ["qualidade_comida", "positivo"], ["tempo_espera_salao", "negativo"]]},
+    {"review_id": "R02443", "rule": "R3", "reason": "'Demorou pra caramba pra chegar' em delivery = so prazo", "mentions": [["prazo_entrega", "negativo"]]},
+    {"review_id": "R00965", "rule": "R3", "reason": "'Demorou mais do que eu esperava' em delivery = prazo", "mentions": [["condicao_entrega", "positivo"], ["preco_valor", "positivo"], ["prazo_entrega", "negativo"]]},
+    {"review_id": "R02941", "rule": "R3", "reason": "'chegou rapidinho' em delivery = prazo", "mentions": [["preco_valor", "negativo"], ["qualidade_comida", "positivo"], ["prazo_entrega", "positivo"]]}
+  ]
+}

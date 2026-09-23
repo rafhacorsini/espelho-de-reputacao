@@ -1,6 +1,6 @@
 import pytest
 
-from espelho.metrics import evaluate, polarity_confusion, prf
+from espelho.metrics import agreement, evaluate, polarity_confusion, prf
 
 
 def m(aspect, polarity):
@@ -40,6 +40,21 @@ def test_invented_aspect_on_empty_review():
     assert result["empty_reviews"] == 1
     assert result["empty_correct"] == 0
     assert result["micro"]["precision"] == 0
+
+
+def test_agreement_identical_labels_is_perfect():
+    labels = {"R1": [m("atendimento", "positivo")], "R2": [m("preco_valor", "negativo")]}
+    result = agreement(labels, labels)
+    assert result["raw_agreement"] == 1.0
+    assert result["kappa"] == pytest.approx(1.0)
+
+
+def test_agreement_kappa_is_below_raw_when_labels_differ():
+    a = {"R1": [m("atendimento", "positivo")], "R2": [m("preco_valor", "negativo")]}
+    b = {"R1": [m("atendimento", "positivo")], "R2": []}
+    result = agreement(a, b)
+    assert result["raw_agreement"] == pytest.approx(15 / 16)
+    assert result["kappa"] < result["raw_agreement"]
 
 
 def test_polarity_confusion():

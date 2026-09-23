@@ -31,7 +31,7 @@ def main() -> None:
 
     total_cost = 0.0
     for _, row in dev.iterrows():
-        result = extract_one(client, MODEL, row["text"])
+        result = extract_one(client, MODEL, row["text"], channel=row["channel"])
         total_cost += result["cost"]
 
         print(f"\n{row['review_id']} ({row['stars']}★): {row['text']}")

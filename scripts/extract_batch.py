@@ -25,13 +25,17 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--split", choices=["dev", "test"], required=True)
     parser.add_argument("--version", choices=PROMPT_VERSIONS, default=PROMPT_VERSION)
+    parser.add_argument(
+        "--abrir-test", action="store_true",
+        help="obrigatório para rodar no test: ele só se abre uma vez, com o sistema já congelado",
+    )
     args = parser.parse_args()
 
-    if args.split == "test":
-        raise SystemExit(
-            "O test só abre no Dia 3, uma vez. Se você quer mesmo abrir agora, "
-            "edite este script — não vou abrir por engano."
-        )
+    if args.split == "test" and not args.abrir_test:
+        raise SystemExit("O test só se abre uma vez. Use --abrir-test se o sistema já está congelado.")
+    out = Path(f"data/predictions/{args.split}_{args.version}.parquet")
+    if args.split == "test" and out.exists():
+        raise SystemExit(f"{out} já existe: o test desta versão já foi aberto. Não rode de novo.")
 
     load_dotenv()
     key = os.getenv("OPENAI_API_KEY") or os.getenv("CHATGPT_API_KEY")
@@ -64,7 +68,6 @@ def main() -> None:
             if i % 20 == 0 or i == len(df):
                 print(f"{i}/{len(df)} | custo acumulado: US$ {total_cost:.4f}")
 
-    out = Path(f"data/predictions/{args.split}_{args.version}.parquet")
     out.parent.mkdir(parents=True, exist_ok=True)
     pd.DataFrame(predictions).to_parquet(out, index=False)
 

@@ -1,0 +1,16 @@
+{
+  "version": "test_v2",
+  "date": "2026-09-24",
+  "method": "Dupla anotacao: rotulagem do dia 1 (test.parquet) + rodada cega do dia 3 com as regras v2 (relabel_test.jsonl). A base e a rodada cega; as divergencias foram conciliadas pelo texto e pelas regras escritas, ANTES de qualquer modelo ver o test.",
+  "agreement_before_adjudication": {"reviews": 50, "raw_agreement": 0.9725, "kappa": 0.899},
+  "disagreements": {
+    "rule_change": ["R01346", "R01148", "R02953", "R01522"],
+    "slip_day1": ["R01031"],
+    "slip_blind": ["R02273"],
+    "slip_both": ["R02428"]
+  },
+  "adjustments_to_blind_labels": [
+    {"review_id": "R02273", "add": ["ambiente_limpeza", "positivo"], "reason": "'o ambiente e bem agradavel'"},
+    {"review_id": "R02428", "add": ["preco_valor", "positivo"], "reason": "'Pelo preco, achei que vale bastante a pena'"}
+  ]
+}

@@ -2,7 +2,13 @@ import numpy as np
 import pytest
 
 from espelho.cost import embedding_cost
-from espelho.taxonomy import agreement_with_labels, cluster, purity
+from espelho.taxonomy import agreement_with_labels, cluster, detect_dish, purity
+
+
+def test_detect_dish_with_accents_and_complaints():
+    assert detect_dish("O RISOTO de camarão estava perfeito") == "risoto de camarão"
+    assert detect_dish("Hambúrguer sem graça e mal preparado.") == "hambúrguer"
+    assert detect_dish("A pizza estava ótima") is None
 
 
 def test_purity_by_hand():

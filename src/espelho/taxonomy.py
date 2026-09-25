@@ -16,8 +16,25 @@ from sklearn.cluster import HDBSCAN
 from sklearn.decomposition import PCA
 from sklearn.metrics import adjusted_rand_score
 
+from espelho.baseline import normalize
 from espelho.cost import call_cost, embedding_cost
 from espelho.schema import ASPECTS
+
+# Pratos descobertos pelos grupos no Dia 4 (taxonomy_v1): prato -> (grupo de
+# origem, palavras que o identificam, sem acento). Descobrir usa embeddings;
+# detectar usa o nome, que está escrito no texto e pega também as reclamações.
+DISHES = {
+    "risoto de camarão": (10, ["risoto", "risotto"]),
+    "hambúrguer": (1, ["hamburguer", "hamburger", "burger", "burguer"]),
+}
+
+
+def detect_dish(text: str) -> str | None:
+    clean = normalize(text)
+    for dish, (_, words) in DISHES.items():
+        if any(word in clean for word in words):
+            return dish
+    return None
 
 EMBEDDING_MODEL = "text-embedding-3-small"
 NAMING_MODEL = "gpt-5.6-terra"

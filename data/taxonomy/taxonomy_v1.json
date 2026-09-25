@@ -1,0 +1,96 @@
+{
+  "version": "taxonomy_v1",
+  "date": "2026-09-25",
+  "decided_by": "curadoria humana sobre o rascunho de reports/taxonomy_draft.md",
+  "categories": [
+    {
+      "aspect": "atendimento",
+      "meaning": "Educação, atenção e agilidade da equipe no salão (garçom, caixa, gerente).",
+      "polarities": [
+        "positivo",
+        "negativo"
+      ]
+    },
+    {
+      "aspect": "tempo_espera_salao",
+      "meaning": "Fila para sentar ou demora da cozinha e do prato até a mesa.",
+      "polarities": [
+        "positivo",
+        "negativo"
+      ]
+    },
+    {
+      "aspect": "prazo_entrega",
+      "meaning": "Tempo total até o pedido chegar por delivery.",
+      "polarities": [
+        "positivo",
+        "negativo"
+      ]
+    },
+    {
+      "aspect": "condicao_entrega",
+      "meaning": "Estado do pedido entregue: embalagem, temperatura, item errado ou faltando.",
+      "polarities": [
+        "positivo",
+        "negativo"
+      ]
+    },
+    {
+      "aspect": "qualidade_comida",
+      "meaning": "Sabor, ponto, frescor e porção da comida.",
+      "polarities": [
+        "positivo",
+        "negativo"
+      ]
+    },
+    {
+      "aspect": "preco_valor",
+      "meaning": "Preço e se vale o que custa.",
+      "polarities": [
+        "positivo",
+        "negativo"
+      ]
+    },
+    {
+      "aspect": "ambiente_limpeza",
+      "meaning": "Limpeza, barulho, conforto e clima do lugar.",
+      "polarities": [
+        "positivo",
+        "negativo"
+      ]
+    },
+    {
+      "aspect": "resposta_canal",
+      "meaning": "Rapidez e qualidade das respostas do restaurante por WhatsApp, telefone ou app.",
+      "polarities": [
+        "positivo",
+        "negativo"
+      ]
+    }
+  ],
+  "subthemes": {
+    "qualidade_comida": {
+      "prato_em_destaque": {
+        "risoto de camarão": {
+          "discovered_in_cluster": 10,
+          "detected_by_words": [
+            "risoto",
+            "risotto"
+          ]
+        },
+        "hambúrguer": {
+          "discovered_in_cluster": 1,
+          "detected_by_words": [
+            "hamburguer",
+            "hamburger",
+            "burger",
+            "burguer"
+          ]
+        }
+      }
+    }
+  },
+  "not_used": {
+    "cluster 7 'chegada do pedido'": "mistura prazo, espera e condição; o extrator separa com o canal"
+  }
+}

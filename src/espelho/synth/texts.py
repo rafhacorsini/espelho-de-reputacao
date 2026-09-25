@@ -34,10 +34,12 @@ def parse_lines(raw: str):
     return records, errors
 
 
-def validate(records, expected_ids):
+def validate(records, expected_ids, allow_duplicate_text: bool = False):
     """Separa os registros bons dos problemáticos.
 
     Devolve (válidos, problemas), onde cada problema é (review_id, motivo).
+    No corpus inteiro, textos curtos repetidos ("Foi ok.") são realistas, por
+    isso dá para permitir texto repetido com allow_duplicate_text.
     """
     expected = set(expected_ids)
     valid, problems, seen_ids, seen_texts = [], [], set(), set()
@@ -51,7 +53,7 @@ def validate(records, expected_ids):
             problems.append((review_id, "tamanho fora do esperado"))
         elif SNAKE_CASE.search(text):
             problems.append((review_id, "vazou nome técnico de aspecto"))
-        elif text.lower() in seen_texts:
+        elif text.lower() in seen_texts and not allow_duplicate_text:
             problems.append((review_id, "texto repetido"))
         else:
             seen_ids.add(review_id)

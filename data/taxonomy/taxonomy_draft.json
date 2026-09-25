@@ -1,0 +1,167 @@
+[
+  {
+    "cluster": 0,
+    "size": 333,
+    "name": "Ambiente limpo e agradável",
+    "definition": "Os trechos elogiam a limpeza do espaço, frequentemente associada a uma sensação de organização, conforto e cuidado.",
+    "polarity": "positivo",
+    "parent_aspect": "ambiente_limpeza",
+    "top_label": "ambiente_limpeza|positivo",
+    "top_label_share": 0.7327327327327328,
+    "examples": [
+      "o espaço estava limpo e agradável",
+      "o espaço era bem limpinho",
+      "o espaço era limpo e agradável"
+    ]
+  },
+  {
+    "cluster": 1,
+    "size": 234,
+    "name": "Hambúrguer saboroso",
+    "definition": "Os trechos elogiam o sabor, o preparo e a montagem caprichada do hambúrguer.",
+    "polarity": "positivo",
+    "parent_aspect": "qualidade_comida",
+    "top_label": "qualidade_comida|positivo",
+    "top_label_share": 0.782051282051282,
+    "examples": [
+      "Hambúrguer brabo demais, chegou gostoso e bem caprichado",
+      "O hambúrguer veio bem montado e saboroso",
+      "O hambúrguer veio bem saboroso e com boa combinação de ingredientes"
+    ]
+  },
+  {
+    "cluster": 2,
+    "size": 502,
+    "name": "Preço percebido",
+    "definition": "Avaliações sobre o preço cobrado ser justo, caro ou compatível com o que foi oferecido.",
+    "polarity": "misto",
+    "parent_aspect": "preco_valor",
+    "top_label": "preco_valor|negativo",
+    "top_label_share": 0.549800796812749,
+    "examples": [
+      "achei o valor cobrado alto. Poderia custar menos",
+      "Para o preço cobrado, achei um pouco caro",
+      "o preço foi camarada e não doeu tanto no bolso"
+    ]
+  },
+  {
+    "cluster": 3,
+    "size": 99,
+    "name": "Demora na resposta",
+    "definition": "Demora excessiva para responder mensagens ou tentativas de contato pelos canais de atendimento.",
+    "polarity": "negativo",
+    "parent_aspect": "resposta_canal",
+    "top_label": "resposta_canal|negativo",
+    "top_label_share": 0.9696969696969697,
+    "examples": [
+      "demoraram pra respoder no contato",
+      "demoraram bastante para responder quando tentei contato",
+      "demoraram para responder no canal"
+    ]
+  },
+  {
+    "cluster": 4,
+    "size": 75,
+    "name": "Resposta rápida no contato",
+    "definition": "Os clientes destacam que o restaurante responde rapidamente quando são acionados por telefone, WhatsApp ou outros canais de contato, muitas vezes esclarecendo dúvidas.",
+    "polarity": "positivo",
+    "parent_aspect": "resposta_canal",
+    "top_label": "resposta_canal|positivo",
+    "top_label_share": 0.9733333333333334,
+    "examples": [
+      "responderam rapidinho quando entrei em contato",
+      "responderam rápido quando perguntei pelo telefone",
+      "responderam rapidamente quando precisei tirar uma dúvida"
+    ]
+  },
+  {
+    "cluster": 5,
+    "size": 313,
+    "name": "Equipe atenciosa e ágil",
+    "definition": "Os clientes elogiam a simpatia, educação, prestatividade e rapidez da equipe no atendimento.",
+    "polarity": "positivo",
+    "parent_aspect": "atendimento",
+    "top_label": "atendimento|positivo",
+    "top_label_share": 1.0,
+    "examples": [
+      "O atendimento foi super gente boa e agil",
+      "O atendimento foi bem gente boa e super atencioso",
+      "O atendimento foi educado e bastante atencioso. A equipe ajudou quando precisei e manteve um bom ritmo"
+    ]
+  },
+  {
+    "cluster": 6,
+    "size": 105,
+    "name": "Atendimento lento e desatento",
+    "definition": "Os clientes relatam demora para receber atenção e falta de atenção ou cuidado no atendimento.",
+    "polarity": "negativo",
+    "parent_aspect": "atendimento",
+    "top_label": "atendimento|negativo",
+    "top_label_share": 0.9904761904761905,
+    "examples": [
+      "o atendimento foi meio desatento",
+      "O atendimento foi meio enrolado e não deram muita atenção",
+      "O atendimento foi um pouco demorado e faltou atenção"
+    ]
+  },
+  {
+    "cluster": 7,
+    "size": 723,
+    "name": "Prazo de chegada",
+    "definition": "Relatos sobre o pedido chegar dentro, antes ou depois do prazo esperado, incluindo demoras na entrega.",
+    "polarity": "misto",
+    "parent_aspect": "prazo_entrega",
+    "top_label": "condicao_entrega|positivo",
+    "top_label_share": 0.301521438450899,
+    "examples": [
+      "Pedido chegou certinho",
+      "Levou um tempão pra chegar",
+      "O pedido chegou direitinho ao destino"
+    ]
+  },
+  {
+    "cluster": 8,
+    "size": 78,
+    "name": "Entrega rápida",
+    "definition": "Os trechos elogiam a rapidez com que o pedido foi entregue.",
+    "polarity": "positivo",
+    "parent_aspect": "prazo_entrega",
+    "top_label": "prazo_entrega|positivo",
+    "top_label_share": 1.0,
+    "examples": [
+      "Chegou rapidinho",
+      "Chegou rapidão",
+      "Chegou rápido"
+    ]
+  },
+  {
+    "cluster": 9,
+    "size": 1018,
+    "name": "Sabor e preparo",
+    "definition": "Elogios ao sabor, ao tempero equilibrado, à boa textura e ao cuidado no preparo da comida.",
+    "polarity": "positivo",
+    "parent_aspect": "qualidade_comida",
+    "top_label": "qualidade_comida|positivo",
+    "top_label_share": 0.8055009823182712,
+    "examples": [
+      "A comida estava gostosa e mostrou um bom cuidado no preparo",
+      "A comida chegou uma delícia, bem temperada e com ótima textura",
+      "A comida também tava bem feita e saborosa"
+    ]
+  },
+  {
+    "cluster": 10,
+    "size": 109,
+    "name": "Risoto de camarão",
+    "definition": "Elogios ao risoto de camarão, descrito como cremoso, saboroso e bem temperado.",
+    "polarity": "positivo",
+    "parent_aspect": "qualidade_comida",
+    "top_label": "qualidade_comida|positivo",
+    "top_label_share": 1.0,
+    "examples": [
+      "O risoto de camarão estava bom demais, bem cremoso e saboroso",
+      "O risoto de camarão estava muito bom",
+      "O risoto de camarão estava excelente, bem cremoso e muito saboroso"
+    ]
+  }
+]

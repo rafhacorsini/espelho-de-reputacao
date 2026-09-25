@@ -22,3 +22,8 @@ data/synthetic/missing_ids.txt
 
 # Material de estudo pessoal, não é parte do case study
 estudo/
+data/synthetic/generated_texts.jsonl
+data/predictions/corpus_extract_v2.jsonl
+
+# Regenerável por ~US$ 0,001 (scripts/discover_taxonomy.py)
+data/taxonomy/embeddings.npy

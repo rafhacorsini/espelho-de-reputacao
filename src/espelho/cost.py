@@ -20,6 +20,13 @@ PRICES_PER_MTOK = {
 # O Batch API cobra metade do preço padrão, na entrada e na saída.
 BATCH_DISCOUNT = 0.5
 
+# Embeddings só cobram entrada.
+EMBEDDING_PRICES_PER_MTOK = {"text-embedding-3-small": 0.02, "text-embedding-3-large": 0.13}
+
+
+def embedding_cost(model: str, tokens: int) -> float:
+    return tokens * EMBEDDING_PRICES_PER_MTOK[model] / 1_000_000
+
 
 def call_cost(
     model: str, input_tokens: int, output_tokens: int, batch: bool = False

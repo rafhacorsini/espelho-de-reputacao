@@ -1,0 +1,165 @@
+{
+  "impact": [
+    {
+      "category": "atendimento|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.395,
+      "pipeline": 0.378,
+      "pipeline_low": 0.325,
+      "pipeline_high": 0.431
+    },
+    {
+      "category": "atendimento|negativo",
+      "plantado": -1.0,
+      "verdade_latente": -0.983,
+      "pipeline": -0.856,
+      "pipeline_low": -0.937,
+      "pipeline_high": -0.774
+    },
+    {
+      "category": "tempo_espera_salao|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.389,
+      "pipeline": 0.277,
+      "pipeline_low": 0.169,
+      "pipeline_high": 0.385
+    },
+    {
+      "category": "tempo_espera_salao|negativo",
+      "plantado": -0.9,
+      "verdade_latente": -0.872,
+      "pipeline": -0.766,
+      "pipeline_low": -0.843,
+      "pipeline_high": -0.688
+    },
+    {
+      "category": "prazo_entrega|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.452,
+      "pipeline": 0.368,
+      "pipeline_low": 0.293,
+      "pipeline_high": 0.444
+    },
+    {
+      "category": "prazo_entrega|negativo",
+      "plantado": -1.1,
+      "verdade_latente": -1.139,
+      "pipeline": -0.997,
+      "pipeline_low": -1.071,
+      "pipeline_high": -0.923
+    },
+    {
+      "category": "condicao_entrega|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.378,
+      "pipeline": 0.147,
+      "pipeline_low": 0.087,
+      "pipeline_high": 0.207
+    },
+    {
+      "category": "condicao_entrega|negativo",
+      "plantado": -1.0,
+      "verdade_latente": -1.014,
+      "pipeline": -0.809,
+      "pipeline_low": -0.885,
+      "pipeline_high": -0.733
+    },
+    {
+      "category": "qualidade_comida|positivo",
+      "plantado": 0.6,
+      "verdade_latente": 0.588,
+      "pipeline": 0.568,
+      "pipeline_low": 0.534,
+      "pipeline_high": 0.601
+    },
+    {
+      "category": "qualidade_comida|negativo",
+      "plantado": -1.5,
+      "verdade_latente": -1.495,
+      "pipeline": -1.355,
+      "pipeline_low": -1.413,
+      "pipeline_high": -1.297
+    },
+    {
+      "category": "preco_valor|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.421,
+      "pipeline": 0.363,
+      "pipeline_low": 0.299,
+      "pipeline_high": 0.426
+    },
+    {
+      "category": "preco_valor|negativo",
+      "plantado": -0.6,
+      "verdade_latente": -0.601,
+      "pipeline": -0.632,
+      "pipeline_low": -0.688,
+      "pipeline_high": -0.575
+    },
+    {
+      "category": "ambiente_limpeza|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.388,
+      "pipeline": 0.335,
+      "pipeline_low": 0.271,
+      "pipeline_high": 0.399
+    },
+    {
+      "category": "ambiente_limpeza|negativo",
+      "plantado": -0.8,
+      "verdade_latente": -0.807,
+      "pipeline": -0.763,
+      "pipeline_low": -0.863,
+      "pipeline_high": -0.662
+    },
+    {
+      "category": "resposta_canal|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.35,
+      "pipeline": 0.362,
+      "pipeline_low": 0.256,
+      "pipeline_high": 0.469
+    },
+    {
+      "category": "resposta_canal|negativo",
+      "plantado": -0.7,
+      "verdade_latente": -0.682,
+      "pipeline": -0.62,
+      "pipeline_low": -0.708,
+      "pipeline_high": -0.533
+    }
+  ],
+  "alarms": {
+    "detections": {
+      "E5": 22,
+      "E1": 34,
+      "E4": 48
+    },
+    "false_alarms": 38,
+    "series": 112
+  },
+  "star_alarms": {
+    "E1": 51,
+    "E2": 56,
+    "E3": null,
+    "E4": 51,
+    "E5": 47
+  },
+  "sensitivity": {
+    "3.0": {
+      "found": 3,
+      "mean_delay": 1.3333333333333333,
+      "false_alarms": 64
+    },
+    "5.0": {
+      "found": 3,
+      "mean_delay": 3.0,
+      "false_alarms": 38
+    },
+    "8.0": {
+      "found": 3,
+      "mean_delay": 7.0,
+      "false_alarms": 21
+    }
+  }
+}

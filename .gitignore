@@ -27,3 +27,4 @@ data/predictions/corpus_extract_v2.jsonl
 
 # Regenerável por ~US$ 0,001 (scripts/discover_taxonomy.py)
 data/taxonomy/embeddings.npy
+data/cascade/review_embeddings.npy

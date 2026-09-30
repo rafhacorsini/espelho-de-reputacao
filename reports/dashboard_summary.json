@@ -1,0 +1,399 @@
+{
+  "evaluation_test": [
+    {
+      "system": "LLM extract_v2 (oficial)",
+      "f1": [
+        0.9375,
+        0.8974358974358975,
+        0.9866666666666666
+      ]
+    },
+    {
+      "system": "LLM extract_v1",
+      "f1": [
+        0.953125,
+        0.9230769230769231,
+        0.9873417721518987
+      ]
+    },
+    {
+      "system": "Baseline de palavras-chave",
+      "f1": [
+        0.7142857142857143,
+        0.6301369863013699,
+        0.7951807228915663
+      ]
+    }
+  ],
+  "test_reviews": 50,
+  "kappa": 0.899,
+  "cascade": [
+    {
+      "system": "LLM puro",
+      "f1_test": 0.9375,
+      "cost_per_1000": 0.21577558368495078,
+      "share_llm": 1.0
+    },
+    {
+      "system": "Aluno sozinho",
+      "f1_test": 0.8141592920353982,
+      "cost_per_1000": 0.0009,
+      "share_llm": 0.0
+    },
+    {
+      "system": "Cascata (limiar 0.6)",
+      "f1_test": 0.9120000000000001,
+      "cost_per_1000": 0.05700165175808721,
+      "share_llm": 0.26
+    }
+  ],
+  "security": {
+    "noise": 0.025,
+    "configs": {
+      "D0 sem defesa": {
+        "asr": 0.025,
+        "extra_cost": 0.0
+      },
+      "D1 review delimitada": {
+        "asr": 0.05,
+        "extra_cost": 1.4910000000000032e-05
+      },
+      "D2 descarta evidência falsa": {
+        "asr": 0.025,
+        "extra_cost": 0.0
+      },
+      "D3 guarda + v2": {
+        "asr": 0.0,
+        "extra_cost": 0.000102715
+      },
+      "D4 três camadas": {
+        "asr": 0.0,
+        "extra_cost": 0.00011762500000000005
+      }
+    },
+    "cost_per_review": {
+      "v2": 0.00024079499999999997,
+      "v3": 0.000255705,
+      "guard": 0.000102715
+    },
+    "guard": {
+      "attacks_flagged": 1.0,
+      "normal_false_blocks": 0,
+      "normal_total": 55,
+      "tricky_false_blocks": 0
+    },
+    "leaks_T06": {
+      "v2_attacked": 0,
+      "v3_attacked": 0
+    },
+    "total_cost": 0.0612288
+  },
+  "alarm": {
+    "alarms": {
+      "detections": {
+        "E5": 28,
+        "E1": 37,
+        "E2": 42,
+        "E4": 49
+      },
+      "false_alarms": 14,
+      "series": 112,
+      "false_per_1000_series_days": 2.7777777777777777
+    },
+    "star_alarms": {
+      "detections": {
+        "E4": 51
+      },
+      "false_alarms": 0
+    },
+    "validation": {
+      "detections": {
+        "E5": 20,
+        "E3": 27,
+        "E1": 35,
+        "E2": 43,
+        "E4": 50
+      },
+      "false_alarms": 8,
+      "series": 112,
+      "false_per_1000_series_days": 1.5873015873015872
+    },
+    "sensitivity": {
+      "3.0": {
+        "detections": {
+          "E5": 22,
+          "E1": 33,
+          "E2": 41,
+          "E4": 45
+        },
+        "false_alarms": 49,
+        "false_per_1000_series_days": 9.722222222222221
+      },
+      "5.0": {
+        "detections": {
+          "E5": 28,
+          "E1": 37,
+          "E2": 42,
+          "E4": 49
+        },
+        "false_alarms": 14,
+        "false_per_1000_series_days": 2.7777777777777777
+      },
+      "8.0": {
+        "detections": {
+          "E5": 31,
+          "E1": 40,
+          "E2": 46
+        },
+        "false_alarms": 5,
+        "false_per_1000_series_days": 0.9920634920634921
+      }
+    }
+  },
+  "impact": [
+    {
+      "category": "atendimento|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.395,
+      "pipeline": 0.378,
+      "pipeline_low": 0.325,
+      "pipeline_high": 0.431
+    },
+    {
+      "category": "atendimento|negativo",
+      "plantado": -1.0,
+      "verdade_latente": -0.983,
+      "pipeline": -0.856,
+      "pipeline_low": -0.937,
+      "pipeline_high": -0.774
+    },
+    {
+      "category": "tempo_espera_salao|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.389,
+      "pipeline": 0.277,
+      "pipeline_low": 0.169,
+      "pipeline_high": 0.385
+    },
+    {
+      "category": "tempo_espera_salao|negativo",
+      "plantado": -0.9,
+      "verdade_latente": -0.872,
+      "pipeline": -0.766,
+      "pipeline_low": -0.843,
+      "pipeline_high": -0.688
+    },
+    {
+      "category": "prazo_entrega|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.452,
+      "pipeline": 0.368,
+      "pipeline_low": 0.293,
+      "pipeline_high": 0.444
+    },
+    {
+      "category": "prazo_entrega|negativo",
+      "plantado": -1.1,
+      "verdade_latente": -1.139,
+      "pipeline": -0.997,
+      "pipeline_low": -1.071,
+      "pipeline_high": -0.923
+    },
+    {
+      "category": "condicao_entrega|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.378,
+      "pipeline": 0.147,
+      "pipeline_low": 0.087,
+      "pipeline_high": 0.207
+    },
+    {
+      "category": "condicao_entrega|negativo",
+      "plantado": -1.0,
+      "verdade_latente": -1.014,
+      "pipeline": -0.809,
+      "pipeline_low": -0.885,
+      "pipeline_high": -0.733
+    },
+    {
+      "category": "qualidade_comida|positivo",
+      "plantado": 0.6,
+      "verdade_latente": 0.588,
+      "pipeline": 0.568,
+      "pipeline_low": 0.534,
+      "pipeline_high": 0.601
+    },
+    {
+      "category": "qualidade_comida|negativo",
+      "plantado": -1.5,
+      "verdade_latente": -1.495,
+      "pipeline": -1.355,
+      "pipeline_low": -1.413,
+      "pipeline_high": -1.297
+    },
+    {
+      "category": "preco_valor|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.421,
+      "pipeline": 0.363,
+      "pipeline_low": 0.299,
+      "pipeline_high": 0.426
+    },
+    {
+      "category": "preco_valor|negativo",
+      "plantado": -0.6,
+      "verdade_latente": -0.601,
+      "pipeline": -0.632,
+      "pipeline_low": -0.688,
+      "pipeline_high": -0.575
+    },
+    {
+      "category": "ambiente_limpeza|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.388,
+      "pipeline": 0.335,
+      "pipeline_low": 0.271,
+      "pipeline_high": 0.399
+    },
+    {
+      "category": "ambiente_limpeza|negativo",
+      "plantado": -0.8,
+      "verdade_latente": -0.807,
+      "pipeline": -0.763,
+      "pipeline_low": -0.863,
+      "pipeline_high": -0.662
+    },
+    {
+      "category": "resposta_canal|positivo",
+      "plantado": 0.4,
+      "verdade_latente": 0.35,
+      "pipeline": 0.362,
+      "pipeline_low": 0.256,
+      "pipeline_high": 0.469
+    },
+    {
+      "category": "resposta_canal|negativo",
+      "plantado": -0.7,
+      "verdade_latente": -0.682,
+      "pipeline": -0.62,
+      "pipeline_low": -0.708,
+      "pipeline_high": -0.533
+    }
+  ],
+  "taxonomy": [
+    {
+      "cluster": 0,
+      "size": 333,
+      "name": "Ambiente limpo e agradável",
+      "polarity": "positivo",
+      "parent_aspect": "ambiente_limpeza"
+    },
+    {
+      "cluster": 1,
+      "size": 234,
+      "name": "Hambúrguer saboroso",
+      "polarity": "positivo",
+      "parent_aspect": "qualidade_comida"
+    },
+    {
+      "cluster": 2,
+      "size": 502,
+      "name": "Preço percebido",
+      "polarity": "misto",
+      "parent_aspect": "preco_valor"
+    },
+    {
+      "cluster": 3,
+      "size": 99,
+      "name": "Demora na resposta",
+      "polarity": "negativo",
+      "parent_aspect": "resposta_canal"
+    },
+    {
+      "cluster": 4,
+      "size": 75,
+      "name": "Resposta rápida no contato",
+      "polarity": "positivo",
+      "parent_aspect": "resposta_canal"
+    },
+    {
+      "cluster": 5,
+      "size": 313,
+      "name": "Equipe atenciosa e ágil",
+      "polarity": "positivo",
+      "parent_aspect": "atendimento"
+    },
+    {
+      "cluster": 6,
+      "size": 105,
+      "name": "Atendimento lento e desatento",
+      "polarity": "negativo",
+      "parent_aspect": "atendimento"
+    },
+    {
+      "cluster": 7,
+      "size": 723,
+      "name": "Prazo de chegada",
+      "polarity": "misto",
+      "parent_aspect": "prazo_entrega"
+    },
+    {
+      "cluster": 8,
+      "size": 78,
+      "name": "Entrega rápida",
+      "polarity": "positivo",
+      "parent_aspect": "prazo_entrega"
+    },
+    {
+      "cluster": 9,
+      "size": 1018,
+      "name": "Sabor e preparo",
+      "polarity": "positivo",
+      "parent_aspect": "qualidade_comida"
+    },
+    {
+      "cluster": 10,
+      "size": 109,
+      "name": "Risoto de camarão",
+      "polarity": "positivo",
+      "parent_aspect": "qualidade_comida"
+    }
+  ],
+  "costs": [
+    {
+      "day": "Dia 0",
+      "what": "teste de fumaça",
+      "usd": 4e-05
+    },
+    {
+      "day": "Dia 1",
+      "what": "correções de texto pela API",
+      "usd": 0.0045
+    },
+    {
+      "day": "Dia 2",
+      "what": "extração no dev (v1)",
+      "usd": 0.0182
+    },
+    {
+      "day": "Dia 3",
+      "what": "v2 no dev + test (v1 e v2)",
+      "usd": 0.0418
+    },
+    {
+      "day": "Dia 4",
+      "what": "texto do corpus + extração nas 3.555 + embeddings + nomes",
+      "usd": 1.0005
+    },
+    {
+      "day": "Dia 5",
+      "what": "estatística local",
+      "usd": 0.0
+    },
+    {
+      "day": "Dia 6",
+      "what": "embeddings das reviews + ataques + v3 no dev",
+      "usd": 0.0864
+    }
+  ]
+}

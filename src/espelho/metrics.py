@@ -10,6 +10,7 @@ conta como acerto (verdadeiro positivo) se o aspecto E a polaridade batem.
 
 from collections import Counter
 
+import numpy as np
 from sklearn.metrics import cohen_kappa_score
 
 from espelho.schema import ASPECTS
@@ -66,6 +67,19 @@ def evaluate(gold_by_review: dict, pred_by_review: dict) -> dict:
         "empty_reviews": len(empty_gold),
         "empty_correct": empty_kept,
     }
+
+
+def bootstrap_f1(gold: dict, pred: dict, n_resamples: int = 2000, seed: int = 7) -> tuple[float, float, float]:
+    """F1 micro e o intervalo de 95%, sorteando as reviews com reposição."""
+    ids = np.array(list(gold))
+    rng = np.random.default_rng(seed)
+
+    def f1(sample):
+        return evaluate({i: gold[i] for i in sample}, {i: pred.get(i, []) for i in sample})["micro"]["f1"] or 0.0
+
+    values = [f1(rng.choice(ids, size=len(ids), replace=True)) for _ in range(n_resamples)]
+    low, high = np.percentile(values, [2.5, 97.5])
+    return f1(ids), float(low), float(high)
 
 
 def agreement(labels_a: dict, labels_b: dict) -> dict:

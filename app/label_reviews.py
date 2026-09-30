@@ -9,6 +9,10 @@ não mencionado, elogio ou reclamação. Salva a cada clique em "Salvar e avanç
 Rodada cega (Dia 3): rotula de novo as 50 reviews do test, sem ver os rótulos
 antigos e já com as regras do gabarito v2:
     uv run streamlit run app/label_reviews.py -- --rodada-cega
+
+Reviews reais (Dia 7): rotula as reviews reais antes de o modelo vê-las
+(os rótulos ficam em data/raw/, fora do git):
+    uv run streamlit run app/label_reviews.py -- --reais
 """
 
 import sys
@@ -23,8 +27,13 @@ from espelho.gold import TARGET_LABELED, load_labels, progress, save_label  # no
 from espelho.schema import ASPECTS  # noqa: E402
 
 BLIND = "--rodada-cega" in sys.argv
+REAL = "--reais" in sys.argv
 
-if BLIND:
+if REAL:
+    PILOT_REVIEWS = Path("data/raw/real_reviews.parquet")
+    LABELS_PATH = Path("data/raw/real_labels.jsonl")
+    TARGET = len(pd.read_parquet(PILOT_REVIEWS)) if PILOT_REVIEWS.exists() else 100
+elif BLIND:
     PILOT_REVIEWS = Path("data/gold/test.parquet")
     LABELS_PATH = Path("data/gold/relabel_test.jsonl")
     TARGET = 50
@@ -60,8 +69,8 @@ def main() -> None:
     labels = load_labels(LABELS_PATH)
     stats = progress(labels, target=TARGET)
 
-    st.title("Rodada cega: test" if BLIND else "Rotular reviews")
-    if BLIND:
+    st.title("Reviews reais" if REAL else "Rodada cega: test" if BLIND else "Rotular reviews")
+    if BLIND or REAL:
         st.info(RULES_V2)
     st.progress(min(1.0, stats["labeled"] / stats["target"]))
     st.caption(
@@ -83,8 +92,9 @@ def main() -> None:
     existing = labels.get(row["review_id"])
 
     st.divider()
-    cuisine = f" · {row['cuisine']}" if "cuisine" in row else ""
-    st.markdown(f"**{row['review_id']}** · {row['channel']}{cuisine} · {row['stars']}★")
+    extra = f" · {row['cuisine']}" if "cuisine" in row else f" · Restaurante {row['restaurant']}" if "restaurant" in row else ""
+    channel = row["channel"] or "canal ?"
+    st.markdown(f"**{row['review_id']}** · {channel}{extra} · {row['stars']}★")
     st.markdown(f"> {row['text']}")
     if existing:
         st.info("Esta review já foi rotulada. Você pode ver e corrigir os valores abaixo.")

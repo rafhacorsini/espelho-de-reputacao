@@ -1,6 +1,12 @@
 import pytest
 
-from espelho.metrics import agreement, evaluate, polarity_confusion, prf
+from espelho.metrics import agreement, bootstrap_f1, evaluate, polarity_confusion, prf
+
+
+def test_bootstrap_f1_perfect_prediction_has_tight_interval():
+    gold = {f"R{i}": [{"aspect": "atendimento", "polarity": "positivo"}] for i in range(20)}
+    point, low, high = bootstrap_f1(gold, gold, n_resamples=200)
+    assert point == low == high == pytest.approx(1.0)
 
 
 def m(aspect, polarity):

@@ -2,7 +2,7 @@
 
 Sistema de Engenharia de IA que transforma reviews de restaurantes em **dores e forças mensuráveis**, avisa quando um problema começa e mostra **quanto cada dor custa em estrelas**. Construído em 7 dias como case de portfólio, com **US$ 1,15 de API no total**.
 
-**Dashboard:** _link após a publicação_ · **Código:** este repositório
+**Página do case:** [rafhacorsini.github.io/espelho-de-reputacao](https://rafhacorsini.github.io/espelho-de-reputacao/) · **Dashboard de laboratório (Streamlit):** `uv run streamlit run app/dashboard.py`
 
 ## Resultados em 30 segundos
 
@@ -94,7 +94,8 @@ Para rodar etapas que chamam a API, copie `.env.example` para `.env` e coloque u
 ```
 src/espelho/   extração, métricas, baseline, taxonomia, alarme, cascata, segurança
 scripts/       uma etapa por script, na ordem dos dias
-app/           dashboard e ferramenta de rotulagem
+app/           dashboard Streamlit e ferramenta de rotulagem
+site/          página pública do case (React + Vite, lê site/src/data/case.json, gerado por scripts/export_site_data.py)
 data/gold/     gabarito humano (v1, v2, rodada cega e as correções com motivo)
 reports/       resultados de cada etapa, em JSON e Markdown
 tests/         testes de métricas, alarme, cascata, segurança e trava de regressão de qualidade

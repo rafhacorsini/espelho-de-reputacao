@@ -18,7 +18,7 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 
-from espelho.analytics import binomial_cusum, indicator_table, mean_cusum_down  # noqa: E402
+from espelho.analytics import event_series, indicator_table  # noqa: E402
 from espelho.synth.truth import EVENTS  # noqa: E402
 
 ASPECT_NAMES = {
@@ -74,25 +74,9 @@ def label(category: str) -> str:
 def event_timeline(event_id: str) -> tuple[pd.DataFrame, int, int | None, int | None]:
     corpus, indicators = load_corpus()
     event = next(e for e in EVENTS if e.event_id == event_id)
-    rows = corpus if event.store_id is None else corpus[corpus["store_id"] == event.store_id]
-    category = f"{event.aspect}|{event.polarity}"
-    days = np.arange(corpus["day"].max() + 1)
-    totals = rows.groupby("day").size().reindex(days, fill_value=0)
-    counts = indicators.loc[rows.index, category].groupby(rows["day"]).sum().reindex(days, fill_value=0)
-    star_sum = rows.groupby("day")["stars"].sum().reindex(days, fill_value=0)
-
-    aspect_alarms = binomial_cusum(counts.to_numpy(), totals.to_numpy(), BASELINE_DAYS, H)
-    star_values = [rows.loc[rows["day"] == d, "stars"].to_numpy(dtype=float) for d in days]
-    star_alarms = mean_cusum_down(star_values, BASELINE_DAYS, h=H)
-    aspect_alarm = next((a for a in aspect_alarms if event.start_day <= a <= event.start_day + WINDOW), None)
-    star_alarm = next((a for a in star_alarms if a >= event.start_day), None)
-
-    df = pd.DataFrame({
-        "dia": days,
-        "taxa": counts.rolling(7, min_periods=1).sum() / totals.rolling(7, min_periods=1).sum(),
-        "nota": star_sum.rolling(7, min_periods=1).sum() / totals.rolling(7, min_periods=1).sum(),
-    })
-    return df, event.start_day, aspect_alarm, star_alarm
+    s = event_series(corpus, indicators, event, BASELINE_DAYS, H, WINDOW)
+    df = pd.DataFrame({"dia": s["days"], "taxa": s["share7"], "nota": s["stars7"]})
+    return df, s["start"], s["aspect_alarm"], s["star_alarm"]
 
 
 def markers(start: int, aspect_alarm, star_alarm) -> pd.DataFrame:

@@ -60,7 +60,7 @@ def main() -> None:
         "cascade": [
             {"system": "LLM puro", "f1_test": cascade["test"]["llm_f1"], "cost_per_1000": 1000 * cascade["llm_cost_per_review"], "share_llm": 1.0},
             {"system": "Aluno sozinho", "f1_test": cascade["test"]["student_f1"], "cost_per_1000": 1000 * 0.02 * 45 / 1_000_000, "share_llm": 0.0},
-            {"system": f"Cascata (limiar {cascade['chosen_tau']})", "f1_test": chosen["f1"], "cost_per_1000": chosen["cost_per_1000"], "share_llm": chosen["share_llm"]},
+            {"system": f"Cascata (limiar {str(cascade['chosen_tau']).replace('.', ',')})", "f1_test": chosen["f1"], "cost_per_1000": chosen["cost_per_1000"], "share_llm": chosen["share_llm"]},
         ],
         "security": security,
         "alarm": {k: day5[k] for k in ("alarms", "star_alarms", "validation", "sensitivity")},

@@ -1,0 +1,6 @@
+﻿# O site é um projeto pnpm isolado (não sobe para pastas acima).
+packages: []
+
+# Scripts de instalação permitidos: só o do esbuild (confere o binário da plataforma).
+allowBuilds:
+  esbuild: true

@@ -31,3 +31,7 @@ data/cascade/review_embeddings.npy
 
 # Configuração local do editor/preview
 .claude/
+
+# Site: dependências e build (o GitHub Actions monta de novo)
+site/node_modules/
+site/dist/

@@ -1,0 +1,1931 @@
+{
+ "reviews": 3555,
+ "events": [
+  {
+   "id": "E1",
+   "description": "Demora na entrega",
+   "store": "Loja 3",
+   "aspect": "prazo_entrega",
+   "polarity": "negativo",
+   "start": 30,
+   "aspect_alarm": 37,
+   "star_alarm": 51,
+   "series": [
+    {
+     "day": 0,
+     "share": 0.0,
+     "stars": 4.308
+    },
+    {
+     "day": 1,
+     "share": 0.05,
+     "stars": 4.05
+    },
+    {
+     "day": 2,
+     "share": 0.037,
+     "stars": 4.148
+    },
+    {
+     "day": 3,
+     "share": 0.0476,
+     "stars": 4.071
+    },
+    {
+     "day": 4,
+     "share": 0.0417,
+     "stars": 4.083
+    },
+    {
+     "day": 5,
+     "share": 0.0377,
+     "stars": 4.038
+    },
+    {
+     "day": 6,
+     "share": 0.0448,
+     "stars": 4.015
+    },
+    {
+     "day": 7,
+     "share": 0.0746,
+     "stars": 3.896
+    },
+    {
+     "day": 8,
+     "share": 0.0779,
+     "stars": 3.87
+    },
+    {
+     "day": 9,
+     "share": 0.1013,
+     "stars": 3.81
+    },
+    {
+     "day": 10,
+     "share": 0.0909,
+     "stars": 3.753
+    },
+    {
+     "day": 11,
+     "share": 0.0952,
+     "stars": 3.75
+    },
+    {
+     "day": 12,
+     "share": 0.0851,
+     "stars": 3.713
+    },
+    {
+     "day": 13,
+     "share": 0.0899,
+     "stars": 3.663
+    },
+    {
+     "day": 14,
+     "share": 0.0805,
+     "stars": 3.701
+    },
+    {
+     "day": 15,
+     "share": 0.0602,
+     "stars": 3.735
+    },
+    {
+     "day": 16,
+     "share": 0.0375,
+     "stars": 3.737
+    },
+    {
+     "day": 17,
+     "share": 0.0506,
+     "stars": 3.734
+    },
+    {
+     "day": 18,
+     "share": 0.0429,
+     "stars": 3.714
+    },
+    {
+     "day": 19,
+     "share": 0.0645,
+     "stars": 3.774
+    },
+    {
+     "day": 20,
+     "share": 0.0781,
+     "stars": 3.828
+    },
+    {
+     "day": 21,
+     "share": 0.0758,
+     "stars": 3.803
+    },
+    {
+     "day": 22,
+     "share": 0.0877,
+     "stars": 3.807
+    },
+    {
+     "day": 23,
+     "share": 0.082,
+     "stars": 3.885
+    },
+    {
+     "day": 24,
+     "share": 0.0606,
+     "stars": 3.864
+    },
+    {
+     "day": 25,
+     "share": 0.0563,
+     "stars": 3.873
+    },
+    {
+     "day": 26,
+     "share": 0.0417,
+     "stars": 3.903
+    },
+    {
+     "day": 27,
+     "share": 0.0141,
+     "stars": 3.958
+    },
+    {
+     "day": 28,
+     "share": 0.0,
+     "stars": 3.904
+    },
+    {
+     "day": 29,
+     "share": 0.0,
+     "stars": 3.846
+    },
+    {
+     "day": 30,
+     "share": 0.0,
+     "stars": 3.818
+    },
+    {
+     "day": 31,
+     "share": 0.0152,
+     "stars": 3.864
+    },
+    {
+     "day": 32,
+     "share": 0.0725,
+     "stars": 3.754
+    },
+    {
+     "day": 33,
+     "share": 0.1014,
+     "stars": 3.754
+    },
+    {
+     "day": 34,
+     "share": 0.1343,
+     "stars": 3.672
+    },
+    {
+     "day": 35,
+     "share": 0.1692,
+     "stars": 3.662
+    },
+    {
+     "day": 36,
+     "share": 0.1846,
+     "stars": 3.723
+    },
+    {
+     "day": 37,
+     "share": 0.2113,
+     "stars": 3.732
+    },
+    {
+     "day": 38,
+     "share": 0.2113,
+     "stars": 3.789
+    },
+    {
+     "day": 39,
+     "share": 0.1905,
+     "stars": 3.81
+    },
+    {
+     "day": 40,
+     "share": 0.2174,
+     "stars": 3.681
+    },
+    {
+     "day": 41,
+     "share": 0.2319,
+     "stars": 3.739
+    },
+    {
+     "day": 42,
+     "share": 0.2353,
+     "stars": 3.809
+    },
+    {
+     "day": 43,
+     "share": 0.2429,
+     "stars": 3.786
+    },
+    {
+     "day": 44,
+     "share": 0.2462,
+     "stars": 3.692
+    },
+    {
+     "day": 45,
+     "share": 0.2537,
+     "stars": 3.567
+    },
+    {
+     "day": 46,
+     "share": 0.24,
+     "stars": 3.64
+    },
+    {
+     "day": 47,
+     "share": 0.1857,
+     "stars": 3.686
+    },
+    {
+     "day": 48,
+     "share": 0.1667,
+     "stars": 3.628
+    },
+    {
+     "day": 49,
+     "share": 0.1688,
+     "stars": 3.571
+    },
+    {
+     "day": 50,
+     "share": 0.2051,
+     "stars": 3.577
+    },
+    {
+     "day": 51,
+     "share": 0.225,
+     "stars": 3.587
+    },
+    {
+     "day": 52,
+     "share": 0.2152,
+     "stars": 3.671
+    },
+    {
+     "day": 53,
+     "share": 0.2027,
+     "stars": 3.649
+    },
+    {
+     "day": 54,
+     "share": 0.1948,
+     "stars": 3.623
+    },
+    {
+     "day": 55,
+     "share": 0.1918,
+     "stars": 3.644
+    },
+    {
+     "day": 56,
+     "share": 0.1944,
+     "stars": 3.694
+    },
+    {
+     "day": 57,
+     "share": 0.1867,
+     "stars": 3.613
+    },
+    {
+     "day": 58,
+     "share": 0.1892,
+     "stars": 3.486
+    },
+    {
+     "day": 59,
+     "share": 0.1892,
+     "stars": 3.486
+    }
+   ]
+  },
+  {
+   "id": "E2",
+   "description": "Equipe nova piora o atendimento",
+   "store": "Loja 5",
+   "aspect": "atendimento",
+   "polarity": "negativo",
+   "start": 40,
+   "aspect_alarm": 42,
+   "star_alarm": 56,
+   "series": [
+    {
+     "day": 0,
+     "share": 0.2,
+     "stars": 3.9
+    },
+    {
+     "day": 1,
+     "share": 0.087,
+     "stars": 3.913
+    },
+    {
+     "day": 2,
+     "share": 0.0606,
+     "stars": 3.939
+    },
+    {
+     "day": 3,
+     "share": 0.0455,
+     "stars": 4.0
+    },
+    {
+     "day": 4,
+     "share": 0.0588,
+     "stars": 4.02
+    },
+    {
+     "day": 5,
+     "share": 0.0526,
+     "stars": 4.0
+    },
+    {
+     "day": 6,
+     "share": 0.0556,
+     "stars": 3.944
+    },
+    {
+     "day": 7,
+     "share": 0.0308,
+     "stars": 3.969
+    },
+    {
+     "day": 8,
+     "share": 0.0351,
+     "stars": 3.947
+    },
+    {
+     "day": 9,
+     "share": 0.0377,
+     "stars": 3.943
+    },
+    {
+     "day": 10,
+     "share": 0.04,
+     "stars": 3.84
+    },
+    {
+     "day": 11,
+     "share": 0.0377,
+     "stars": 3.849
+    },
+    {
+     "day": 12,
+     "share": 0.0357,
+     "stars": 3.929
+    },
+    {
+     "day": 13,
+     "share": 0.0192,
+     "stars": 3.962
+    },
+    {
+     "day": 14,
+     "share": 0.0182,
+     "stars": 3.891
+    },
+    {
+     "day": 15,
+     "share": 0.0169,
+     "stars": 4.0
+    },
+    {
+     "day": 16,
+     "share": 0.0351,
+     "stars": 4.0
+    },
+    {
+     "day": 17,
+     "share": 0.0364,
+     "stars": 4.055
+    },
+    {
+     "day": 18,
+     "share": 0.0351,
+     "stars": 4.0
+    },
+    {
+     "day": 19,
+     "share": 0.0345,
+     "stars": 4.017
+    },
+    {
+     "day": 20,
+     "share": 0.0377,
+     "stars": 4.0
+    },
+    {
+     "day": 21,
+     "share": 0.0333,
+     "stars": 4.1
+    },
+    {
+     "day": 22,
+     "share": 0.0286,
+     "stars": 3.943
+    },
+    {
+     "day": 23,
+     "share": 0.026,
+     "stars": 3.935
+    },
+    {
+     "day": 24,
+     "share": 0.0247,
+     "stars": 3.963
+    },
+    {
+     "day": 25,
+     "share": 0.0247,
+     "stars": 3.901
+    },
+    {
+     "day": 26,
+     "share": 0.0488,
+     "stars": 3.841
+    },
+    {
+     "day": 27,
+     "share": 0.0667,
+     "stars": 3.778
+    },
+    {
+     "day": 28,
+     "share": 0.0814,
+     "stars": 3.791
+    },
+    {
+     "day": 29,
+     "share": 0.0833,
+     "stars": 3.833
+    },
+    {
+     "day": 30,
+     "share": 0.093,
+     "stars": 3.826
+    },
+    {
+     "day": 31,
+     "share": 0.092,
+     "stars": 3.828
+    },
+    {
+     "day": 32,
+     "share": 0.092,
+     "stars": 3.885
+    },
+    {
+     "day": 33,
+     "share": 0.1163,
+     "stars": 3.884
+    },
+    {
+     "day": 34,
+     "share": 0.1071,
+     "stars": 4.0
+    },
+    {
+     "day": 35,
+     "share": 0.0952,
+     "stars": 3.988
+    },
+    {
+     "day": 36,
+     "share": 0.0988,
+     "stars": 3.988
+    },
+    {
+     "day": 37,
+     "share": 0.0723,
+     "stars": 4.036
+    },
+    {
+     "day": 38,
+     "share": 0.0714,
+     "stars": 4.0
+    },
+    {
+     "day": 39,
+     "share": 0.0602,
+     "stars": 4.0
+    },
+    {
+     "day": 40,
+     "share": 0.0361,
+     "stars": 3.976
+    },
+    {
+     "day": 41,
+     "share": 0.0732,
+     "stars": 3.976
+    },
+    {
+     "day": 42,
+     "share": 0.1071,
+     "stars": 3.917
+    },
+    {
+     "day": 43,
+     "share": 0.1351,
+     "stars": 3.932
+    },
+    {
+     "day": 44,
+     "share": 0.1571,
+     "stars": 3.9
+    },
+    {
+     "day": 45,
+     "share": 0.1935,
+     "stars": 3.855
+    },
+    {
+     "day": 46,
+     "share": 0.2295,
+     "stars": 3.836
+    },
+    {
+     "day": 47,
+     "share": 0.2373,
+     "stars": 3.847
+    },
+    {
+     "day": 48,
+     "share": 0.2203,
+     "stars": 3.831
+    },
+    {
+     "day": 49,
+     "share": 0.2203,
+     "stars": 3.898
+    },
+    {
+     "day": 50,
+     "share": 0.209,
+     "stars": 3.821
+    },
+    {
+     "day": 51,
+     "share": 0.2131,
+     "stars": 3.787
+    },
+    {
+     "day": 52,
+     "share": 0.2286,
+     "stars": 3.829
+    },
+    {
+     "day": 53,
+     "share": 0.2143,
+     "stars": 3.8
+    },
+    {
+     "day": 54,
+     "share": 0.1806,
+     "stars": 3.806
+    },
+    {
+     "day": 55,
+     "share": 0.1972,
+     "stars": 3.775
+    },
+    {
+     "day": 56,
+     "share": 0.209,
+     "stars": 3.612
+    },
+    {
+     "day": 57,
+     "share": 0.1912,
+     "stars": 3.706
+    },
+    {
+     "day": 58,
+     "share": 0.1892,
+     "stars": 3.716
+    },
+    {
+     "day": 59,
+     "share": 0.1618,
+     "stars": 3.765
+    }
+   ]
+  },
+  {
+   "id": "E3",
+   "description": "Prato novo gera elogios",
+   "store": "Loja 2",
+   "aspect": "qualidade_comida",
+   "polarity": "positivo",
+   "start": 25,
+   "aspect_alarm": null,
+   "star_alarm": null,
+   "series": [
+    {
+     "day": 0,
+     "share": 0.3636,
+     "stars": 4.091
+    },
+    {
+     "day": 1,
+     "share": 0.4375,
+     "stars": 4.0
+    },
+    {
+     "day": 2,
+     "share": 0.4167,
+     "stars": 4.083
+    },
+    {
+     "day": 3,
+     "share": 0.4194,
+     "stars": 4.0
+    },
+    {
+     "day": 4,
+     "share": 0.4737,
+     "stars": 4.053
+    },
+    {
+     "day": 5,
+     "share": 0.48,
+     "stars": 3.96
+    },
+    {
+     "day": 6,
+     "share": 0.5254,
+     "stars": 3.966
+    },
+    {
+     "day": 7,
+     "share": 0.5172,
+     "stars": 3.914
+    },
+    {
+     "day": 8,
+     "share": 0.5231,
+     "stars": 4.0
+    },
+    {
+     "day": 9,
+     "share": 0.4925,
+     "stars": 3.91
+    },
+    {
+     "day": 10,
+     "share": 0.4928,
+     "stars": 3.971
+    },
+    {
+     "day": 11,
+     "share": 0.4658,
+     "stars": 3.918
+    },
+    {
+     "day": 12,
+     "share": 0.4559,
+     "stars": 3.971
+    },
+    {
+     "day": 13,
+     "share": 0.4203,
+     "stars": 4.014
+    },
+    {
+     "day": 14,
+     "share": 0.4348,
+     "stars": 3.986
+    },
+    {
+     "day": 15,
+     "share": 0.3881,
+     "stars": 3.881
+    },
+    {
+     "day": 16,
+     "share": 0.4225,
+     "stars": 3.944
+    },
+    {
+     "day": 17,
+     "share": 0.4,
+     "stars": 3.962
+    },
+    {
+     "day": 18,
+     "share": 0.3837,
+     "stars": 3.953
+    },
+    {
+     "day": 19,
+     "share": 0.3478,
+     "stars": 3.935
+    },
+    {
+     "day": 20,
+     "share": 0.3444,
+     "stars": 3.911
+    },
+    {
+     "day": 21,
+     "share": 0.3043,
+     "stars": 3.902
+    },
+    {
+     "day": 22,
+     "share": 0.3077,
+     "stars": 3.956
+    },
+    {
+     "day": 23,
+     "share": 0.3023,
+     "stars": 3.965
+    },
+    {
+     "day": 24,
+     "share": 0.3289,
+     "stars": 3.947
+    },
+    {
+     "day": 25,
+     "share": 0.3385,
+     "stars": 3.985
+    },
+    {
+     "day": 26,
+     "share": 0.4262,
+     "stars": 4.049
+    },
+    {
+     "day": 27,
+     "share": 0.3968,
+     "stars": 3.952
+    },
+    {
+     "day": 28,
+     "share": 0.4828,
+     "stars": 3.966
+    },
+    {
+     "day": 29,
+     "share": 0.537,
+     "stars": 3.981
+    },
+    {
+     "day": 30,
+     "share": 0.549,
+     "stars": 3.98
+    },
+    {
+     "day": 31,
+     "share": 0.5094,
+     "stars": 3.887
+    },
+    {
+     "day": 32,
+     "share": 0.5185,
+     "stars": 3.907
+    },
+    {
+     "day": 33,
+     "share": 0.5185,
+     "stars": 3.981
+    },
+    {
+     "day": 34,
+     "share": 0.5357,
+     "stars": 4.125
+    },
+    {
+     "day": 35,
+     "share": 0.5185,
+     "stars": 4.185
+    },
+    {
+     "day": 36,
+     "share": 0.5,
+     "stars": 4.086
+    },
+    {
+     "day": 37,
+     "share": 0.5,
+     "stars": 4.065
+    },
+    {
+     "day": 38,
+     "share": 0.5484,
+     "stars": 4.145
+    },
+    {
+     "day": 39,
+     "share": 0.5652,
+     "stars": 4.174
+    },
+    {
+     "day": 40,
+     "share": 0.5522,
+     "stars": 4.09
+    },
+    {
+     "day": 41,
+     "share": 0.5303,
+     "stars": 3.955
+    },
+    {
+     "day": 42,
+     "share": 0.5147,
+     "stars": 3.956
+    },
+    {
+     "day": 43,
+     "share": 0.5135,
+     "stars": 4.041
+    },
+    {
+     "day": 44,
+     "share": 0.4795,
+     "stars": 4.041
+    },
+    {
+     "day": 45,
+     "share": 0.4648,
+     "stars": 3.986
+    },
+    {
+     "day": 46,
+     "share": 0.4493,
+     "stars": 3.957
+    },
+    {
+     "day": 47,
+     "share": 0.4167,
+     "stars": 3.931
+    },
+    {
+     "day": 48,
+     "share": 0.4571,
+     "stars": 3.986
+    },
+    {
+     "day": 49,
+     "share": 0.4444,
+     "stars": 4.014
+    },
+    {
+     "day": 50,
+     "share": 0.4286,
+     "stars": 3.971
+    },
+    {
+     "day": 51,
+     "share": 0.4559,
+     "stars": 3.926
+    },
+    {
+     "day": 52,
+     "share": 0.4412,
+     "stars": 3.971
+    },
+    {
+     "day": 53,
+     "share": 0.4444,
+     "stars": 3.968
+    },
+    {
+     "day": 54,
+     "share": 0.4615,
+     "stars": 4.0
+    },
+    {
+     "day": 55,
+     "share": 0.5143,
+     "stars": 4.143
+    },
+    {
+     "day": 56,
+     "share": 0.5362,
+     "stars": 4.13
+    },
+    {
+     "day": 57,
+     "share": 0.5588,
+     "stars": 4.103
+    },
+    {
+     "day": 58,
+     "share": 0.5821,
+     "stars": 4.119
+    },
+    {
+     "day": 59,
+     "share": 0.5417,
+     "stars": 3.972
+    }
+   ]
+  },
+  {
+   "id": "E4",
+   "description": "Aumento de preço na rede toda",
+   "store": "Rede toda",
+   "aspect": "preco_valor",
+   "polarity": "negativo",
+   "start": 45,
+   "aspect_alarm": 49,
+   "star_alarm": 51,
+   "series": [
+    {
+     "day": 0,
+     "share": 0.0656,
+     "stars": 4.131
+    },
+    {
+     "day": 1,
+     "share": 0.0684,
+     "stars": 4.0
+    },
+    {
+     "day": 2,
+     "share": 0.0765,
+     "stars": 3.984
+    },
+    {
+     "day": 3,
+     "share": 0.0782,
+     "stars": 3.963
+    },
+    {
+     "day": 4,
+     "share": 0.0712,
+     "stars": 3.989
+    },
+    {
+     "day": 5,
+     "share": 0.074,
+     "stars": 3.959
+    },
+    {
+     "day": 6,
+     "share": 0.0777,
+     "stars": 3.939
+    },
+    {
+     "day": 7,
+     "share": 0.08,
+     "stars": 3.902
+    },
+    {
+     "day": 8,
+     "share": 0.0858,
+     "stars": 3.902
+    },
+    {
+     "day": 9,
+     "share": 0.0842,
+     "stars": 3.88
+    },
+    {
+     "day": 10,
+     "share": 0.0911,
+     "stars": 3.863
+    },
+    {
+     "day": 11,
+     "share": 0.0972,
+     "stars": 3.834
+    },
+    {
+     "day": 12,
+     "share": 0.0995,
+     "stars": 3.848
+    },
+    {
+     "day": 13,
+     "share": 0.0934,
+     "stars": 3.855
+    },
+    {
+     "day": 14,
+     "share": 0.0963,
+     "stars": 3.832
+    },
+    {
+     "day": 15,
+     "share": 0.0835,
+     "stars": 3.843
+    },
+    {
+     "day": 16,
+     "share": 0.0852,
+     "stars": 3.877
+    },
+    {
+     "day": 17,
+     "share": 0.0821,
+     "stars": 3.883
+    },
+    {
+     "day": 18,
+     "share": 0.084,
+     "stars": 3.899
+    },
+    {
+     "day": 19,
+     "share": 0.0803,
+     "stars": 3.9
+    },
+    {
+     "day": 20,
+     "share": 0.0831,
+     "stars": 3.905
+    },
+    {
+     "day": 21,
+     "share": 0.0755,
+     "stars": 3.927
+    },
+    {
+     "day": 22,
+     "share": 0.0809,
+     "stars": 3.912
+    },
+    {
+     "day": 23,
+     "share": 0.0791,
+     "stars": 3.892
+    },
+    {
+     "day": 24,
+     "share": 0.0738,
+     "stars": 3.911
+    },
+    {
+     "day": 25,
+     "share": 0.0706,
+     "stars": 3.861
+    },
+    {
+     "day": 26,
+     "share": 0.0662,
+     "stars": 3.879
+    },
+    {
+     "day": 27,
+     "share": 0.0682,
+     "stars": 3.859
+    },
+    {
+     "day": 28,
+     "share": 0.0733,
+     "stars": 3.849
+    },
+    {
+     "day": 29,
+     "share": 0.0735,
+     "stars": 3.86
+    },
+    {
+     "day": 30,
+     "share": 0.078,
+     "stars": 3.858
+    },
+    {
+     "day": 31,
+     "share": 0.0789,
+     "stars": 3.825
+    },
+    {
+     "day": 32,
+     "share": 0.0751,
+     "stars": 3.85
+    },
+    {
+     "day": 33,
+     "share": 0.0762,
+     "stars": 3.86
+    },
+    {
+     "day": 34,
+     "share": 0.0701,
+     "stars": 3.883
+    },
+    {
+     "day": 35,
+     "share": 0.0653,
+     "stars": 3.872
+    },
+    {
+     "day": 36,
+     "share": 0.0678,
+     "stars": 3.86
+    },
+    {
+     "day": 37,
+     "share": 0.0644,
+     "stars": 3.864
+    },
+    {
+     "day": 38,
+     "share": 0.0624,
+     "stars": 3.9
+    },
+    {
+     "day": 39,
+     "share": 0.0631,
+     "stars": 3.914
+    },
+    {
+     "day": 40,
+     "share": 0.0586,
+     "stars": 3.863
+    },
+    {
+     "day": 41,
+     "share": 0.0577,
+     "stars": 3.859
+    },
+    {
+     "day": 42,
+     "share": 0.0559,
+     "stars": 3.876
+    },
+    {
+     "day": 43,
+     "share": 0.0541,
+     "stars": 3.906
+    },
+    {
+     "day": 44,
+     "share": 0.0535,
+     "stars": 3.891
+    },
+    {
+     "day": 45,
+     "share": 0.0732,
+     "stars": 3.831
+    },
+    {
+     "day": 46,
+     "share": 0.0767,
+     "stars": 3.834
+    },
+    {
+     "day": 47,
+     "share": 0.0944,
+     "stars": 3.827
+    },
+    {
+     "day": 48,
+     "share": 0.1162,
+     "stars": 3.808
+    },
+    {
+     "day": 49,
+     "share": 0.1369,
+     "stars": 3.797
+    },
+    {
+     "day": 50,
+     "share": 0.1397,
+     "stars": 3.77
+    },
+    {
+     "day": 51,
+     "share": 0.1408,
+     "stars": 3.74
+    },
+    {
+     "day": 52,
+     "share": 0.1286,
+     "stars": 3.801
+    },
+    {
+     "day": 53,
+     "share": 0.1454,
+     "stars": 3.774
+    },
+    {
+     "day": 54,
+     "share": 0.1393,
+     "stars": 3.786
+    },
+    {
+     "day": 55,
+     "share": 0.1191,
+     "stars": 3.826
+    },
+    {
+     "day": 56,
+     "share": 0.099,
+     "stars": 3.81
+    },
+    {
+     "day": 57,
+     "share": 0.1139,
+     "stars": 3.795
+    },
+    {
+     "day": 58,
+     "share": 0.1218,
+     "stars": 3.789
+    },
+    {
+     "day": 59,
+     "share": 0.1221,
+     "stars": 3.751
+    }
+   ]
+  },
+  {
+   "id": "E5",
+   "description": "Demora na resposta do WhatsApp",
+   "store": "Loja 1",
+   "aspect": "resposta_canal",
+   "polarity": "negativo",
+   "start": 20,
+   "aspect_alarm": 28,
+   "star_alarm": 47,
+   "series": [
+    {
+     "day": 0,
+     "share": 0.0,
+     "stars": 4.444
+    },
+    {
+     "day": 1,
+     "share": 0.0588,
+     "stars": 4.235
+    },
+    {
+     "day": 2,
+     "share": 0.0333,
+     "stars": 4.0
+    },
+    {
+     "day": 3,
+     "share": 0.0286,
+     "stars": 4.0
+    },
+    {
+     "day": 4,
+     "share": 0.0233,
+     "stars": 4.047
+    },
+    {
+     "day": 5,
+     "share": 0.0185,
+     "stars": 4.0
+    },
+    {
+     "day": 6,
+     "share": 0.0308,
+     "stars": 4.0
+    },
+    {
+     "day": 7,
+     "share": 0.0317,
+     "stars": 3.952
+    },
+    {
+     "day": 8,
+     "share": 0.0159,
+     "stars": 3.921
+    },
+    {
+     "day": 9,
+     "share": 0.0164,
+     "stars": 4.016
+    },
+    {
+     "day": 10,
+     "share": 0.0145,
+     "stars": 4.0
+    },
+    {
+     "day": 11,
+     "share": 0.0274,
+     "stars": 3.945
+    },
+    {
+     "day": 12,
+     "share": 0.027,
+     "stars": 3.946
+    },
+    {
+     "day": 13,
+     "share": 0.0282,
+     "stars": 3.915
+    },
+    {
+     "day": 14,
+     "share": 0.0286,
+     "stars": 3.814
+    },
+    {
+     "day": 15,
+     "share": 0.029,
+     "stars": 3.855
+    },
+    {
+     "day": 16,
+     "share": 0.0423,
+     "stars": 3.873
+    },
+    {
+     "day": 17,
+     "share": 0.0429,
+     "stars": 3.857
+    },
+    {
+     "day": 18,
+     "share": 0.0256,
+     "stars": 3.923
+    },
+    {
+     "day": 19,
+     "share": 0.0263,
+     "stars": 3.934
+    },
+    {
+     "day": 20,
+     "share": 0.0482,
+     "stars": 3.928
+    },
+    {
+     "day": 21,
+     "share": 0.0562,
+     "stars": 3.944
+    },
+    {
+     "day": 22,
+     "share": 0.0761,
+     "stars": 3.88
+    },
+    {
+     "day": 23,
+     "share": 0.0667,
+     "stars": 3.789
+    },
+    {
+     "day": 24,
+     "share": 0.0698,
+     "stars": 3.802
+    },
+    {
+     "day": 25,
+     "share": 0.1,
+     "stars": 3.688
+    },
+    {
+     "day": 26,
+     "share": 0.1282,
+     "stars": 3.731
+    },
+    {
+     "day": 27,
+     "share": 0.1143,
+     "stars": 3.743
+    },
+    {
+     "day": 28,
+     "share": 0.125,
+     "stars": 3.75
+    },
+    {
+     "day": 29,
+     "share": 0.1385,
+     "stars": 3.831
+    },
+    {
+     "day": 30,
+     "share": 0.1515,
+     "stars": 3.818
+    },
+    {
+     "day": 31,
+     "share": 0.1719,
+     "stars": 3.766
+    },
+    {
+     "day": 32,
+     "share": 0.1452,
+     "stars": 3.726
+    },
+    {
+     "day": 33,
+     "share": 0.1167,
+     "stars": 3.683
+    },
+    {
+     "day": 34,
+     "share": 0.1212,
+     "stars": 3.697
+    },
+    {
+     "day": 35,
+     "share": 0.1268,
+     "stars": 3.732
+    },
+    {
+     "day": 36,
+     "share": 0.0822,
+     "stars": 3.712
+    },
+    {
+     "day": 37,
+     "share": 0.0933,
+     "stars": 3.72
+    },
+    {
+     "day": 38,
+     "share": 0.1163,
+     "stars": 3.721
+    },
+    {
+     "day": 39,
+     "share": 0.1341,
+     "stars": 3.793
+    },
+    {
+     "day": 40,
+     "share": 0.1264,
+     "stars": 3.77
+    },
+    {
+     "day": 41,
+     "share": 0.1264,
+     "stars": 3.759
+    },
+    {
+     "day": 42,
+     "share": 0.119,
+     "stars": 3.738
+    },
+    {
+     "day": 43,
+     "share": 0.1375,
+     "stars": 3.763
+    },
+    {
+     "day": 44,
+     "share": 0.1316,
+     "stars": 3.789
+    },
+    {
+     "day": 45,
+     "share": 0.1029,
+     "stars": 3.809
+    },
+    {
+     "day": 46,
+     "share": 0.1029,
+     "stars": 3.779
+    },
+    {
+     "day": 47,
+     "share": 0.1571,
+     "stars": 3.686
+    },
+    {
+     "day": 48,
+     "share": 0.1746,
+     "stars": 3.667
+    },
+    {
+     "day": 49,
+     "share": 0.1719,
+     "stars": 3.656
+    },
+    {
+     "day": 50,
+     "share": 0.1587,
+     "stars": 3.619
+    },
+    {
+     "day": 51,
+     "share": 0.1538,
+     "stars": 3.615
+    },
+    {
+     "day": 52,
+     "share": 0.1692,
+     "stars": 3.662
+    },
+    {
+     "day": 53,
+     "share": 0.1905,
+     "stars": 3.603
+    },
+    {
+     "day": 54,
+     "share": 0.1404,
+     "stars": 3.719
+    },
+    {
+     "day": 55,
+     "share": 0.127,
+     "stars": 3.81
+    },
+    {
+     "day": 56,
+     "share": 0.1212,
+     "stars": 3.818
+    },
+    {
+     "day": 57,
+     "share": 0.1343,
+     "stars": 3.791
+    },
+    {
+     "day": 58,
+     "share": 0.1538,
+     "stars": 3.862
+    },
+    {
+     "day": 59,
+     "share": 0.1452,
+     "stars": 3.79
+    }
+   ]
+  }
+ ],
+ "dishes": {
+  "risotto_snippets": 109,
+  "risotto_share_store2": 1.0,
+  "risotto_share_after_day25": 1.0,
+  "burger_praise": 183,
+  "burger_complaints": 45,
+  "snippets_total": 4410
+ },
+ "evaluation_test": [
+  {
+   "system": "LLM extract_v2 (oficial)",
+   "f1": [
+    0.9375,
+    0.8974358974358975,
+    0.9866666666666666
+   ]
+  },
+  {
+   "system": "LLM extract_v1",
+   "f1": [
+    0.953125,
+    0.9230769230769231,
+    0.9873417721518987
+   ]
+  },
+  {
+   "system": "Baseline de palavras-chave",
+   "f1": [
+    0.7142857142857143,
+    0.6301369863013699,
+    0.7951807228915663
+   ]
+  }
+ ],
+ "test_reviews": 50,
+ "kappa": 0.899,
+ "cascade": [
+  {
+   "system": "LLM puro",
+   "f1_test": 0.9375,
+   "cost_per_1000": 0.21577558368495078,
+   "share_llm": 1.0
+  },
+  {
+   "system": "Aluno sozinho",
+   "f1_test": 0.8141592920353982,
+   "cost_per_1000": 0.0009,
+   "share_llm": 0.0
+  },
+  {
+   "system": "Cascata (limiar 0,6)",
+   "f1_test": 0.9120000000000001,
+   "cost_per_1000": 0.05700165175808721,
+   "share_llm": 0.26
+  }
+ ],
+ "security": {
+  "noise": 0.025,
+  "configs": {
+   "D0 sem defesa": {
+    "asr": 0.025,
+    "extra_cost": 0.0
+   },
+   "D1 review delimitada": {
+    "asr": 0.05,
+    "extra_cost": 1.4910000000000032e-05
+   },
+   "D2 descarta evidência falsa": {
+    "asr": 0.025,
+    "extra_cost": 0.0
+   },
+   "D3 guarda + v2": {
+    "asr": 0.0,
+    "extra_cost": 0.000102715
+   },
+   "D4 três camadas": {
+    "asr": 0.0,
+    "extra_cost": 0.00011762500000000005
+   }
+  },
+  "cost_per_review": {
+   "v2": 0.00024079499999999997,
+   "v3": 0.000255705,
+   "guard": 0.000102715
+  },
+  "guard": {
+   "attacks_flagged": 1.0,
+   "normal_false_blocks": 0,
+   "normal_total": 55,
+   "tricky_false_blocks": 0
+  },
+  "leaks_T06": {
+   "v2_attacked": 0,
+   "v3_attacked": 0
+  },
+  "total_cost": 0.0612288
+ },
+ "impact": [
+  {
+   "category": "atendimento|positivo",
+   "plantado": 0.4,
+   "verdade_latente": 0.395,
+   "pipeline": 0.378,
+   "pipeline_low": 0.325,
+   "pipeline_high": 0.431
+  },
+  {
+   "category": "atendimento|negativo",
+   "plantado": -1.0,
+   "verdade_latente": -0.983,
+   "pipeline": -0.856,
+   "pipeline_low": -0.937,
+   "pipeline_high": -0.774
+  },
+  {
+   "category": "tempo_espera_salao|positivo",
+   "plantado": 0.4,
+   "verdade_latente": 0.389,
+   "pipeline": 0.277,
+   "pipeline_low": 0.169,
+   "pipeline_high": 0.385
+  },
+  {
+   "category": "tempo_espera_salao|negativo",
+   "plantado": -0.9,
+   "verdade_latente": -0.872,
+   "pipeline": -0.766,
+   "pipeline_low": -0.843,
+   "pipeline_high": -0.688
+  },
+  {
+   "category": "prazo_entrega|positivo",
+   "plantado": 0.4,
+   "verdade_latente": 0.452,
+   "pipeline": 0.368,
+   "pipeline_low": 0.293,
+   "pipeline_high": 0.444
+  },
+  {
+   "category": "prazo_entrega|negativo",
+   "plantado": -1.1,
+   "verdade_latente": -1.139,
+   "pipeline": -0.997,
+   "pipeline_low": -1.071,
+   "pipeline_high": -0.923
+  },
+  {
+   "category": "condicao_entrega|positivo",
+   "plantado": 0.4,
+   "verdade_latente": 0.378,
+   "pipeline": 0.147,
+   "pipeline_low": 0.087,
+   "pipeline_high": 0.207
+  },
+  {
+   "category": "condicao_entrega|negativo",
+   "plantado": -1.0,
+   "verdade_latente": -1.014,
+   "pipeline": -0.809,
+   "pipeline_low": -0.885,
+   "pipeline_high": -0.733
+  },
+  {
+   "category": "qualidade_comida|positivo",
+   "plantado": 0.6,
+   "verdade_latente": 0.588,
+   "pipeline": 0.568,
+   "pipeline_low": 0.534,
+   "pipeline_high": 0.601
+  },
+  {
+   "category": "qualidade_comida|negativo",
+   "plantado": -1.5,
+   "verdade_latente": -1.495,
+   "pipeline": -1.355,
+   "pipeline_low": -1.413,
+   "pipeline_high": -1.297
+  },
+  {
+   "category": "preco_valor|positivo",
+   "plantado": 0.4,
+   "verdade_latente": 0.421,
+   "pipeline": 0.363,
+   "pipeline_low": 0.299,
+   "pipeline_high": 0.426
+  },
+  {
+   "category": "preco_valor|negativo",
+   "plantado": -0.6,
+   "verdade_latente": -0.601,
+   "pipeline": -0.632,
+   "pipeline_low": -0.688,
+   "pipeline_high": -0.575
+  },
+  {
+   "category": "ambiente_limpeza|positivo",
+   "plantado": 0.4,
+   "verdade_latente": 0.388,
+   "pipeline": 0.335,
+   "pipeline_low": 0.271,
+   "pipeline_high": 0.399
+  },
+  {
+   "category": "ambiente_limpeza|negativo",
+   "plantado": -0.8,
+   "verdade_latente": -0.807,
+   "pipeline": -0.763,
+   "pipeline_low": -0.863,
+   "pipeline_high": -0.662
+  },
+  {
+   "category": "resposta_canal|positivo",
+   "plantado": 0.4,
+   "verdade_latente": 0.35,
+   "pipeline": 0.362,
+   "pipeline_low": 0.256,
+   "pipeline_high": 0.469
+  },
+  {
+   "category": "resposta_canal|negativo",
+   "plantado": -0.7,
+   "verdade_latente": -0.682,
+   "pipeline": -0.62,
+   "pipeline_low": -0.708,
+   "pipeline_high": -0.533
+  }
+ ],
+ "taxonomy": [
+  {
+   "cluster": 0,
+   "size": 333,
+   "name": "Ambiente limpo e agradável",
+   "polarity": "positivo",
+   "parent_aspect": "ambiente_limpeza"
+  },
+  {
+   "cluster": 1,
+   "size": 234,
+   "name": "Hambúrguer saboroso",
+   "polarity": "positivo",
+   "parent_aspect": "qualidade_comida"
+  },
+  {
+   "cluster": 2,
+   "size": 502,
+   "name": "Preço percebido",
+   "polarity": "misto",
+   "parent_aspect": "preco_valor"
+  },
+  {
+   "cluster": 3,
+   "size": 99,
+   "name": "Demora na resposta",
+   "polarity": "negativo",
+   "parent_aspect": "resposta_canal"
+  },
+  {
+   "cluster": 4,
+   "size": 75,
+   "name": "Resposta rápida no contato",
+   "polarity": "positivo",
+   "parent_aspect": "resposta_canal"
+  },
+  {
+   "cluster": 5,
+   "size": 313,
+   "name": "Equipe atenciosa e ágil",
+   "polarity": "positivo",
+   "parent_aspect": "atendimento"
+  },
+  {
+   "cluster": 6,
+   "size": 105,
+   "name": "Atendimento lento e desatento",
+   "polarity": "negativo",
+   "parent_aspect": "atendimento"
+  },
+  {
+   "cluster": 7,
+   "size": 723,
+   "name": "Prazo de chegada",
+   "polarity": "misto",
+   "parent_aspect": "prazo_entrega"
+  },
+  {
+   "cluster": 8,
+   "size": 78,
+   "name": "Entrega rápida",
+   "polarity": "positivo",
+   "parent_aspect": "prazo_entrega"
+  },
+  {
+   "cluster": 9,
+   "size": 1018,
+   "name": "Sabor e preparo",
+   "polarity": "positivo",
+   "parent_aspect": "qualidade_comida"
+  },
+  {
+   "cluster": 10,
+   "size": 109,
+   "name": "Risoto de camarão",
+   "polarity": "positivo",
+   "parent_aspect": "qualidade_comida"
+  }
+ ],
+ "costs": [
+  {
+   "day": "Dia 0",
+   "what": "teste de fumaça",
+   "usd": 4e-05
+  },
+  {
+   "day": "Dia 1",
+   "what": "correções de texto pela API",
+   "usd": 0.0045
+  },
+  {
+   "day": "Dia 2",
+   "what": "extração no dev (v1)",
+   "usd": 0.0182
+  },
+  {
+   "day": "Dia 3",
+   "what": "v2 no dev + test (v1 e v2)",
+   "usd": 0.0418
+  },
+  {
+   "day": "Dia 4",
+   "what": "texto do corpus + extração nas 3.555 + embeddings + nomes",
+   "usd": 1.0005
+  },
+  {
+   "day": "Dia 5",
+   "what": "estatística local",
+   "usd": 0.0
+  },
+  {
+   "day": "Dia 6",
+   "what": "embeddings das reviews + ataques + v3 no dev",
+   "usd": 0.0864
+  }
+ ],
+ "alarm_validation": {
+  "detections": {
+   "E5": 20,
+   "E3": 27,
+   "E1": 35,
+   "E2": 43,
+   "E4": 50
+  },
+  "false_alarms": 8,
+  "series": 112,
+  "false_per_1000_series_days": 1.5873015873015872
+ },
+ "alarm_main": {
+  "detections": {
+   "E5": 28,
+   "E1": 37,
+   "E2": 42,
+   "E4": 49
+  },
+  "false_alarms": 14,
+  "series": 112,
+  "false_per_1000_series_days": 2.7777777777777777
+ }
+}

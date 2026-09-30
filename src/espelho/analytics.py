@@ -58,6 +58,31 @@ def binomial_cusum(
     return alarms
 
 
+def event_series(corpus: pd.DataFrame, indicators: pd.DataFrame, event, baseline_days: int = 15,
+                 h: float = 5.0, window: int = 14) -> dict:
+    """Linha do tempo de um evento plantado: taxa da reclamação e nota média (médias de 7 dias),
+    e os dias em que cada alarme tocou. Usado pelo dashboard e pelo site."""
+    rows = corpus if event.store_id is None else corpus[corpus["store_id"] == event.store_id]
+    category = f"{event.aspect}|{event.polarity}"
+    days = np.arange(corpus["day"].max() + 1)
+    totals = rows.groupby("day").size().reindex(days, fill_value=0)
+    counts = indicators.loc[rows.index, category].groupby(rows["day"]).sum().reindex(days, fill_value=0)
+    star_sum = rows.groupby("day")["stars"].sum().reindex(days, fill_value=0)
+
+    aspect_alarms = binomial_cusum(counts.to_numpy(), totals.to_numpy(), baseline_days, h)
+    star_values = [rows.loc[rows["day"] == d, "stars"].to_numpy(dtype=float) for d in days]
+    star_alarms = mean_cusum_down(star_values, baseline_days, h=h)
+    rolling_totals = totals.rolling(7, min_periods=1).sum()
+    return {
+        "days": days,
+        "share7": (counts.rolling(7, min_periods=1).sum() / rolling_totals).to_numpy(),
+        "stars7": (star_sum.rolling(7, min_periods=1).sum() / rolling_totals).to_numpy(),
+        "start": event.start_day,
+        "aspect_alarm": next((a for a in aspect_alarms if event.start_day <= a <= event.start_day + window), None),
+        "star_alarm": next((a for a in star_alarms if a >= event.start_day), None),
+    }
+
+
 def mean_cusum_down(values: list[np.ndarray], baseline_days: int, k: float = 0.5, h: float = 5.0) -> list[int]:
     """Dias em que o alarme de QUEDA de uma média diária (a nota média) disparou."""
     base = np.concatenate([v for v in values[:baseline_days] if len(v)])

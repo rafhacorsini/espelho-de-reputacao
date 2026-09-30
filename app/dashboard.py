@@ -164,7 +164,9 @@ def main() -> None:
     with tabs[0]:
         a, b, d, e = st.columns(4)
         a.metric("F1 no test cego", f"{official[0]:.2f}", f"{official[0] - baseline[0]:+.2f} vs. baseline", delta_color="off")
-        b.metric("Aviso antes da nota média", "2 a 3 semanas")
+        b.metric("Aviso antes da nota média", "2 a 3 semanas",
+                 help="Nos 3 problemas de uma loja só: alarme em 2 a 8 dias contra 16 a 27 da nota média. "
+                      "No aumento de preço na rede toda, a diferença foi de 2 dias.")
         d.metric("Concordância humana (κ)", f"{s['kappa']:.2f}")
         e.metric("Custo total de API do projeto", f"US$ {sum(x['usd'] for x in s['costs']):.2f}")
         st.markdown(
